@@ -1,0 +1,2965 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>풀무원 녹즙 | 사업 소개</title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="description"
+	content="풀무원의 신선음료 일일유통 브랜드로 제품혁신과 유통혁신, 그리고 식지않는 소비자의 건강 트렌드로 녹즙 판매사업활동을 하고 있습니다.">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+	var displayNum = 0;
+
+	function f_clickFunc(i) {
+
+		displayNum++;
+
+		if (displayNum % 2 == 0) {
+
+			$("#faqLinkCont .faq-cont").eq(i).show()
+
+		} else {
+
+			$("#faqLinkCont .faq-cont").eq(i).hide()
+
+		}
+
+	}
+	
+	
+	
+	function clickTab(j){
+		
+		var guideButton = {
+				"background-color" : "#777"
+				, "color" : "white"
+		}
+			
+		var guideButtonOff = {
+				"background-color" : "white"
+				, "color" : "black"
+		}
+	
+		if( j==0 ){
+			$(".tab-type02 button").eq(0).css(guideButton)
+			$(".tab-type02 button").eq(1).css(guideButtonOff)
+		} else if( j==1 ){
+			$(".tab-type02 button").eq(1).css(guideButton)
+			$(".tab-type02 button").eq(0).css(guideButtonOff)
+		}
+	
+	}
+	
+</script>
+<style type="text/css">
+
+
+
+.faq-cont {
+	display: none;
+	padding: 23px;
+}
+
+div {
+	position: relative;
+	box-sizing: border-box;
+	width: 1140px;
+}
+
+.unb-wrap {
+	position: fixed;
+	top: 0;
+	left: -350px;
+	right: 0;
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	padding: 4px;
+	color: gray;
+	overflow: hidden;
+	font-size: 12px;
+	width: 2500px;
+	margin: 0 auto;
+	z-index: 100;
+}
+
+.nav-mymenu {
+	position: fixed;
+	top: 30px;
+	left: 1400px;
+	width: 100%;
+	margin: 20px;
+}
+
+.header-wrapper .header-wrap .gnb-wrap {
+	margin-left: 147px;
+}
+
+.header-wrapper .header-wrap .section {
+	left: -120px;
+}
+
+.header-wrapper .header-wrap .gnb-wrap a {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration-line: none;
+	color: gray;
+	font-size: 12px;
+	float: left;
+}
+
+.video {
+	width: 800px;
+	height: 450px;
+}
+
+.tab-type02 {
+	width: 1140px;
+}
+
+.tab-type02 button {
+	padding: 10px;
+	margin: -3px;
+	vertical-align: top;
+	cursor: pointer;
+	border: 1px solid silver;
+	width: 570px;
+	height: 50px;
+	font-size: 15px;
+	box-sizing: border-box;
+	position: relative;
+}
+.tab-type02 button #base {
+
+	background-color: #777;
+}
+
+.tab-sublist {
+	margin-bottom: 50px;
+	position: relative;
+	padding: 0;
+	top: 50px;
+	z-index: 5;
+}
+
+.tab-type04 {
+	position: relative;
+	left: -8px;
+	margin: 10px;
+	border-bottom: 1px solid silver;
+	width: 1140px;
+	height: 80px;
+}
+
+.tab-type04 .bar {
+	margin: 5px;
+	font-size: 12px;
+}
+
+.tab-type04 button {
+	font-size: 15px;
+	margin: 5px;
+	top: 100px;
+	left: 100px;
+	background-color: transparent;
+	vertical-align: top;
+	cursor: pointer;
+	box-sizing: border-box;
+	border: none;
+	z-index: 10;
+}
+
+.fl {
+	position: absoulte;
+	width: 1140px;
+	margin: 0 auto;
+	float: left;
+}
+
+.fr {
+	position: fixed;
+	width: 1140px;
+	margin: 0 auto;
+	left: 1400px;
+	overflow: hidden;
+}
+
+.header-wrap .section .h-logo {
+	margin: 10px;
+}
+
+.header-wrap {
+	position: fixed;
+	top: 10px;
+	left: 0;
+	right: 0;
+	float: left;
+	height: 100px;
+	z-index: 90;
+	width: 2000px;
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: white;
+	border: 1px solid silver;
+}
+
+.section {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 0 0 0 0;
+	padding: 0 0 5px 5px;
+	border: 0;
+	float: left;
+}
+
+[class*=btn-] .lb, [class*=btn-] .ico {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* 아이콘 */
+.ico-fold-arrow {
+	width: 14px;
+	height: 8px;
+	background-position: -369px -298px;
+	transform: rotate(180deg);
+	opacity: .45;
+	transition: .1s ease-in;
+}
+
+.ico {
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	background:
+		url(https://greenjuice.pulmuone.com/resources/images/common/ico_sprite_pc.png)
+		no-repeat -10px -10px;
+}
+
+.ico-home {
+	width: 13px;
+	height: 20px;
+	background-position: -10px -50px;
+}
+
+.ico-business-special01 {
+	width: 60px;
+	height: 60px;
+	background-position: -10px -968px;
+}
+
+.ico-business-special02 {
+	width: 60px;
+	height: 60px;
+	background-position: -70px -968px;
+}
+
+.ico-business-special04 {
+	width: 60px;
+	height: 60px;
+	background-position: -190px -968px;
+}
+
+.ico-business-special05 {
+	width: 60px;
+	height: 60px;
+	background-position: -250px -968px;
+}
+
+.ico-h-search {
+	width: 30px;
+	height: 30px;
+	background-position: -10px -10px;
+}
+
+.ico-h-wishlist {
+	width: 30px;
+	height: 30px;
+	background-position: -50px -10px;
+}
+
+.ico-h-cart {
+	width: 30px;
+	height: 30px;
+	background-position: -90px -10px;
+}
+
+.ico-business-state01 {
+	width: 84px;
+	height: 84px;
+	background-position: -503px -858px;
+}
+
+.ico-business-state02 {
+	width: 84px;
+	height: 84px;
+	background-position: -604px -858px;
+}
+
+.ico-business-state03 {
+	width: 84px;
+	height: 84px;
+	background-position: -703px -858px;
+}
+
+i {
+	font-style: normal;
+}
+
+.footer-wrapper .footer-wrap .f-logo {
+	display: block;
+	position: absolute;
+	bottom: 65px;
+	left: -60px;
+	width: 68px;
+	height: 50px;
+	background:
+		url(https://greenjuice.pulmuone.com/resources/images/common/f_logo.png)
+		no-repeat 0 0;
+}
+
+/* 이미지 끝 */
+[data-index="1"] {
+	top: 50px;
+}
+
+.business-state li {
+	position: relative;
+	padding: 54px 54px 54px 54px;
+	border-bottom: 1px solid #ccc;
+}
+
+.business-special {
+	height: 800px;
+	padding: 40px;
+	border: 1px solid #ccc;
+}
+
+.business-state {
+	height: 400px;
+	width: 1140px;
+}
+
+.business-video {
+	max-height: 450px;
+}
+
+.business-video .video-list {
+	width: 360px;
+	padding-right: 10px;
+	list-style: none;
+	max-height: 453px;
+	overflow-y: auto;
+}
+/* .business-state .desc { */
+/* 	border-bottom: 1px solid silver; */
+
+/* } */
+.stitle {
+	margin: 20px 20px 20px 0;
+}
+
+.business-form table thead th {
+	background: #f2f2f2;
+	font-weight: bold;
+	border-bottom: none;
+}
+
+.business-form table tbody th {
+	vertical-align: middle;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+	padding: 14px 30px;
+}
+
+.business-video .video-list img {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.video-list {
+	position: relative;
+	top: -471px;
+	left: 780px;
+	margin: 20px;
+}
+
+.business-form table {
+	border-bottom: 2px solid #000;
+}
+
+.tbl-col {
+	width: 100%;
+	border-top: 2px solid #000;
+}
+
+.tbl-col tbody td {
+	padding: 19px 13px 17px;
+	color: #333;
+	font-size: 14px;
+	line-height: 22px;
+	vertical-align: middle;
+	text-align: center;
+	letter-spacing: -0.03em;
+	border-bottom: 1px solid #ccc;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.tbl-col thead th {
+	padding: 14px 13px;
+	color: #000;
+	font-size: 14px;
+	line-height: 22px;
+	vertical-align: middle;
+	text-align: center;
+	letter-spacing: -0.03em;
+}
+
+.tbl-col tbody th {
+	text-align: left;
+}
+
+.tbl-col td {
+	text-align: center;
+}
+
+.business-faq-list {
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #ccc;
+	margin-top: 50px;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.business-faq-list .faq-item .faq-link {
+	display: block;
+	position: relative;
+	width: calc(100% - 50px);
+	padding: 20px 15px 20px 25px;
+	transition: .07s ease-in-out;
+	z-index: 9;
+}
+
+.business-faq-list .faq-item+.faq-item {
+	border-top: 1px solid #ccc;
+}
+
+.business-faq-list .faq-item {
+	position: relative;
+}
+
+.business-faq-list .faq-item .btn-more-view {
+	display: block;
+	position: absolute;
+	top: 25px;
+	right: 26px;
+	z-index: 1;
+}
+
+button {
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	font-family: 'Montserrat', 'Noto Sans KR', 'Apple SD Gothic Neo',
+		'Malgun Gothic', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+
+a, a:active, a:focus, a:hover, a:link, a:visited {
+	font-size: 100%;
+	text-decoration: none;
+	font-family: 'Montserrat', 'Noto Sans KR', 'Apple SD Gothic Neo',
+		'Malgun Gothic', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.ui-widget.ui-widget-content[role=dialog] {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	/* padding: 24px 30px 30px; */
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+
+.footer-btn-wrap js-footer-fixed is-fixed {
+	position: absolute;
+	bottom: 0;
+}
+
+.footer-wrapper {
+	position: relative;
+	max-height: 180px;
+	bottom: 0;
+}
+
+.footer-wrapper .footer-wrap {
+	padding: 33px 0 37px;
+}
+
+.inquiry-wrap {
+	padding-bottom: 80px;
+}
+
+.footer-wrapper .fnb-wrap {
+	background: #f8f8f8;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 13px;
+}
+
+.fmenu-wrap {
+	height: 25px;
+}
+
+.footer-wrapper .footer-wrap {
+	font-size: 12px;
+	left: 80px;
+}
+</style>
+</head>
+<body style="width: 1140px; margin: 0 auto;">
+	<!-- <div style=" -->
+	/* width: 1140px; */ /* height: 4600px; */ /* margin: 0 auto;" */
+	<!-- > -->
+	<div class="header-wrapper">
+		<!--S:header-wrap-->
+		<div class="header-wrap">
+			<div class="section">
+				<h1>
+					<a href="./sample.html" class="h-logo"><span class="offscreen"><img
+							src="https://greenjuice.pulmuone.com/resources/images/common/h_logo.png"
+							alt="My Image" style="padding: 10px;"></span></a>
+
+				</h1>
+
+				<ul class="gnb-wrap">
+					<li><a href="">제품정보</a></li>
+					<li><a href="">맞춤제품찾기</a></li>
+					<li><a href="">시음신청</a></li>
+					<li><a href="javascript:void(0);"
+						onclick="javascript:popupLogin('/mypage');">MY녹즙</a></li>
+					<li><a href="">이벤트</a></li>
+					<li><a href="./guide.html">창업안내</a></li>
+
+
+
+
+				</ul>
+				<ul class="nav-mymenu">
+					<li><a href="javascript:void(0);" class="btn-h-search"
+						onclick="javascript:gnbSearchOpen();"><i
+							class="ico ico-h-search"></i><span class="offscreen"></span>&nbsp;&nbsp;&nbsp;</a></li>
+					<!-- 비로그인 상태에서 버튼 선택 시 로그인 팝업 후 MY녹즙 > 찜한제품 페이지 이동 -->
+
+					<li><a href="javascript:void(0);" class="btn-h-wishlist"
+						onclick="javascript:popupLogin('/mypage/action/interest');"><i
+							class="ico ico-h-wishlist"></i><span class="offscreen"></span>&nbsp;&nbsp;&nbsp;</a></li>
+
+					<!-- 로그인 상태에서 버튼 선택 시 -->
+
+					<!-- 장바구니에 담긴 제품이 없을 때 -->
+
+					<li><a href="/cart/unit" class="btn-h-cart"><i
+							class="ico ico-h-cart"><em></em></i><span class="offscreen"></span></a></li>
+
+					<!-- 장바구니에 담긴 제품이 있을 때 (is-active 추가) -->
+
+				</ul>
+			</div>
+		</div>
+		<!--E:header-wrap-->
+		<!--S:unb-wrap-->
+		<div class="unb-wrap">
+			<div class="section f-group">
+				<div class="fl">
+					<ul>
+						<li><a href="/info/greenStory">녹즙이야기</a></li>
+						<li><a>|</a>
+						<li><a href="/search/branch">배달가능지역 검색</a></li>
+					</ul>
+				</div>
+				<div class="fr">
+
+					<ul>
+						<li><a href="javascript:void(0);" id="loginPopBtn">로그인</a></li>
+						<li><a>|</a>
+						<li><a href="/member/regist/step1">회원가입</a></li>
+						<li><a>|</a>
+						<li><a href="/forum/faq?category=top10">고객지원</a></li>
+					</ul>
+
+
+				</div>
+			</div>
+		</div>
+		<!--E:unb-wrap-->
+		<!--S: search-wrap-->
+		<form id="productSearchForm" action="/product/search" method="get">
+			<input type="hidden" name="recommendKeyword" value=""> <input
+				type="hidden" name="searchKeyword" value="">
+		</form>
+		<div class="search-wrap js-search-wrap"
+			onclick="javascript:searchOff();">
+			<div class="search-inner js-search-inner">
+				<div class="section">
+					<button type="button" class="btn-search-close js-search-close"
+						onclick="javascript:searchOff();">
+						<i class="ico ico-search-close"></i>
+					</button>
+					<div class="search-ip-box">
+						<input type="text" placeholder="검색어를 입력하세요." title="검색어 입력"
+							id="gnbSearchProduct" maxlength="100"> <a
+							href="javascript:void(0);" onclick="searchProduct();"
+							class="btn-search"><i class="ico ico-h-search"></i><span
+							class="offscreen">검색</span></a>
+					</div>
+
+					<div class="recommend-keyword">
+						<ul class="keyword-list">
+
+							<li><a href="javascript:void(0);"
+								onclick="searchProduct('양배추');">#양배추</a></li>
+
+							<li><a href="javascript:void(0);"
+								onclick="searchProduct('어린이');">#어린이</a></li>
+
+							<li><a href="javascript:void(0);"
+								onclick="searchProduct('노니');">#노니</a></li>
+
+							<li><a href="javascript:void(0);"
+								onclick="searchProduct('유산균');">#유산균</a></li>
+
+							<li><a href="javascript:void(0);"
+								onclick="searchProduct('식사대용');">#식사대용</a></li>
+
+						</ul>
+					</div>
+					<div class="search-img-box"
+						onclick="location.href='/product/product/278'">
+						<div class="inner">
+							<!--<p class="search-desc"><span class="fw-bold">내게 맞는 제품</span>을 찾아보세요!</p> 
+							<a href="/product/product/278">Click</a>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--E: search-wrap-->
+	</div>
+
+
+	<br>
+	<br>
+	<br>
+
+
+	<!--S:cheader-->
+	<div class="cheader">
+		<!--S:cheader-->
+		<div class="cheader">
+			<div class="section">
+				<div class="cnav">
+					<br> <a href="#" class="btn-home"><i class="ico ico-home"></i>HOME</a>
+					<span class="here"> > 창업안내 </span>
+				</div>
+				<br> <br>
+				<div class="ctitle-wrap">
+					<h2 class="ctitle">창업안내</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--E:cheader-->
+	<!--S:cbody-->
+	<div class="cbody-wrap">
+		<div class="section">
+			<div class="cbody-cont">
+				<div class="tab-wrap inquiry-wrap" style="z-index: 10;">
+					<!--S:201200110 탭 순서 변경 -->
+					<ul class="tab-type02" style="z-index: 10;">
+
+						<!--
+					<li class="item"><button
+							onclick="javascript:tabOpen(0);" type="button"
+							data-href="js-tab-cont" data-idx="0" class="tab-link js-tab-link">1인
+							독립형 사업가 모집</button></li>
+					-->
+						<li class="item is-active" id="base"><button onclick="clickTab(0)"
+								type="button" data-href="js-tab-cont" data-idx="1"
+								class="tab-link js-tab-link">가맹점 개설 안내</button></li>
+						<li class="item"><button onclick="clickTab(1)" type="button"
+								data-href="js-tab-cont" data-idx="2"
+								class="tab-link js-tab-link">모닝스텝 안내</button></li>
+					</ul>
+					<!--s: 1인 독립형 사업가 모집-->
+					<div class="tab-cont js-tab-cont js-tab-cont-0"
+						style="display: none;">
+						<h3 class="offscreen">1인 독립형 사업가 모집</h3>
+						<!--S:2depth tab-->
+						<div class="tab-sublist">
+							<ul class="tab-type04">
+								<li class="item tab-item"><button type="button"
+										data-idx="3" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(3);">사업소개</button></li>
+								<li class="item tab-item"><button type="button"
+										data-idx="4" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(4);">독립형 사업가 소개
+										영상</button></li>
+								<li class="item tab-item"><button type="button"
+										data-idx="5" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(5);">상담 접수하기</button></li>
+							</ul>
+						</div>
+						<!--E:2depth tab-->
+						<!--사업소개-->
+						<div class="tab-cont js-btab-cont js-btab-cont-3">
+							<h3 class="stitle">
+								투자금 <em>약 5백만원 내외</em>로 안정적인 수익 창출!<br>노력에 따라 <em>고객 수</em>와
+								<em>수익</em> 증대!
+							</h3>
+							<p class="stitle-desc">
+								풀무원녹즙에서 1인 독립형 사업가를 모집합니다. <br>창업 자금 약 5백만원 내외로 풀무원녹즙과 함께
+								독립형 사업가에 도전하세요!
+							</p>
+							<!-- 						<ul class="alone-special"> -->
+							<!-- 							<li><img src="../../resources/images/contents/img_alone_benefit01.jpg" alt=""> -->
+							<!-- 								<p class="special-txt"> -->
+							<!-- 									<i class="ico ico-check"></i> <b>공동 사무실</b><br>임대 지원! -->
+							<!-- 								</p></li> -->
+							<!-- 							<li><img src="../../resources/images/contents/img_alone_benefit02.jpg" alt=""> -->
+							<!-- 								<p class="special-txt"> -->
+							<!-- 									<i class="ico ico-check"></i> 사업 안정화 지원금<b><br>3백만원 -->
+							<!-- 										지원!</b> -->
+							<!-- 								</p></li> -->
+							<!-- 							<li><img src="../../resources/images/contents/img_alone_benefit03.jpg" alt=""> -->
+							<!-- 								<p class="special-txt"> -->
+							<!-- 									<i class="ico ico-check"></i> 초기 창업 비용<b><br>5백 만원 내외 -->
+							<!-- 										가능!</b> -->
+							<!-- 								</p></li> -->
+							<!-- 							<li><img src="../../resources/images/contents/img_alone_benefit04.jpg" alt=""> -->
+							<!-- 								<p class="special-txt"> -->
+							<!-- 									<i class="ico ico-check"></i> 일과 육아를 함께,<br> <b>주5일</b>(월~금) -->
+							<!-- 									운영! -->
+							<!-- 								</p></li> -->
+							<!-- 						</ul> -->
+							<h3 class="stitle">
+								독립형 사업가 개설 시 <em>혜택</em>
+							</h3>
+							<ul class="alone-benefit-info">
+								<li><i class="ico alone-benefit-info01"></i>
+									<p class="title">
+										<em>01</em> 가맹료(5.5백만원) 면제!
+									</p></li>
+								<li><i class="ico alone-benefit-info02"></i>
+									<p class="title">
+										<em>02</em> 기존 사업장을 공동 사업장으로 활용하여 창업 비용 최소화
+									</p></li>
+								<li><i class="ico alone-benefit-info03"></i>
+									<p class="title">
+										<em>03</em> 5백만원 내외의 창업 투자금으로 본인 노력에 따라 매월 안정적인 수익 창출 가능
+									</p></li>
+								<li><i class="ico alone-benefit-info04"></i>
+									<p class="title">
+										<em>04</em> 사업 개설 초기 6개월 안정화 지원(6개월 총 3백만원 + 시음제품 50% 지원)
+									</p></li>
+								<li><i class="ico alone-benefit-info05"></i>
+									<p class="title">
+										<em>05</em> 독립형 사업가로 사업 시작 후 일정 조건 도달 시, 일반 가맹 사업자로 전환 가능<br>(일반
+										가맹 사업자 전환 시 가맹료 납부 필요)
+									</p></li>
+							</ul>
+							<!-- 						<h3 class="stitle"> -->
+							<!-- 							독립형 사업가 <em>FAQ</em> -->
+							<!-- 						</h3> -->
+							<!--S:FAQ list-->
+							<ul class="business-faq-list alone-faq">
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc()">독립형 사업가란 무엇인가요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">풀무원녹즙과 함께 사업가로서 성장하고 싶으나, 일반적인
+											가맹점을 개설하기에는 창업 투자 비용이 부족한 예비 창업자 분들이 적은 비용으로 창업을 할 수 있도록 새롭게
+											도입한 제도입니다.</div>
+									</div>
+
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc()">독립형 사업가 창업에 필요한 비용은 어떻게 되나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">
+											개설 지역의 고객 배송 규모에 따라 차이가 있으나, 매일 50분의 고객에게 배송을 하는 지역 개설 시 약
+											5백만원+@의 창업 비용이 필요합니다.<br>(* 배달 시 이동 수단 등은 별도 필요)
+										</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc()">일반 가맹점 개설 대비 창업비용이 적은 이유가 무엇인가요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">
+											첫 째, 가맹료(5.5백만원)가 면제됩니다. <br> 둘 째, 독립형 사업가는 기존 가맹점의 사업장을
+											공동으로 활용하는 사업 모델로, 별도의 사무실 보증금 및 임대료가 발생하지 않습니다. 단, 사무실 운영에
+											필요한 운영 비용(ex. 수도광열비 등)은 공동사업자가 공동으로 부담합니다.
+										</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc()">독립형 사업가의 사업 초기 안정화를 위한 제도나 있나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">
+											<p>
+												사업 개설 초기 안정적인 수익 창출과 활동을 할 수 있는 제도를 운영하고 있습니다. <br>월
+												±2백만원의 수익이 발생할 수 있도록 개설 초기 6개월 간 사업 안정화 지원 제도를 운영합니다.
+											</p>
+											<table class="tbl-row">
+												<tbody>
+													<tr class="border-bt">
+														<th scope="row">개설차월</th>
+														<td>1차월</td>
+														<td>2차월</td>
+														<td>3차월</td>
+														<td>4차월</td>
+														<td>5차월</td>
+														<td>6차월</td>
+													</tr>
+													<tr>
+														<th scope="row">사업 안정화 지원</th>
+														<td>1백만원</td>
+														<td>80만원</td>
+														<td>60만원</td>
+														<td>40만원</td>
+														<td>20만원</td>
+														<td>10만원</td>
+													</tr>
+												</tbody>
+											</table>
+											<p>
+												사업 초기 신규 고객 개척 등의 활동에 전념하실 수 있도록 개설 후 6개월 간 사용하신 고객 시음용 제품의
+												50%를 지원해 드립니다. <br>많은 가맹점 사업가를 성공적으로 이끈 본사의 전문인력이 개설부터
+												운영까지 사업 컨설팅과 코칭을 진행해 드립니다.
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc()">유사 사업에 대한 경력이 있어야 하나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">유사한 사업을 운영하셨던 분이라면 녹즙 사업에 대한 적응이
+											빠르실 수 있으나, 그러한 경험이 없으시더라도 전혀 걱정하실 필요가 없습니다. 많은 가맹점 사업가를 성공적으로
+											이끈 본사 전문 인력이 개설부터 운영까지 사업 컨설팅과 코칭을 진행해 드립니다.</div>
+									</div>
+								</li>
+							</ul>
+							<!--E:FAQ list-->
+
+							<div class="apply-btn-box">
+								<h4 class="btn-box-title">
+									더 궁금하신 사항은 <em>카카오톡/전화상담</em> 접수 또는 <em>독립형 사업가 소개 영상</em>을 통해
+									확인하세요.
+								</h4>
+								<ul class="btn-list">
+									<li><a href="https://pf.kakao.com/_uxcGJb"
+										class="btn-lg kakao" onclick=>카카오톡 상담 신청</a></li>
+									<!--<li><a
+									href="https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_uxcGJb%2Fchat"
+									class="btn-lg kakao"
+									onclick="window.open(this.href, '_blank', 'width=500, height=800'); return false">카카오톡
+										상담 신청</a></li>-->
+									<li><button type="button" data-idx="4"
+											data-href="js-btab-cont"
+											class="tab-link js-btab-link btn-lg green"
+											onclick="javascript:businessTabOpen(4);">독립형 사업가 소개
+											영상</button></li>
+									<li><button type="button" data-idx="5"
+											data-href="js-btab-cont"
+											class="tab-link js-btab-link btn-lg green"
+											onclick="javascript:businessTabOpen(5);">상담 접수하기</button></li>
+								</ul>
+							</div>
+						</div>
+						<!--//사업소개-->
+						<!--독립형 사업 소개영상-->
+						<div class="tab-cont js-btab-cont js-btab-cont-4"
+							style="display: none;">
+							<h3 class="stitle">
+								풀무원녹즙 <em>독립형 사업가 소개 영상</em>
+							</h3>
+							<div class="list-head">
+								<p class="list-desc">믿을 수 있는 풀무원 녹즙 배달사업!! 더 궁금한 점을 확인하세요.</p>
+							</div>
+							<div class="video-wrap">
+								<div class="video">
+									<iframe width="100%" height="100%"
+										src="https://www.youtube.com/embed/akoRCI0TG3k?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen=""></iframe>
+								</div>
+							</div>
+
+							<div class="apply-btn-box">
+								<h4 class="btn-box-title">
+									추가로 더 궁금하신 사항은 <em>카카오톡상담</em> 또는 <em>전화 상담 접수</em>를 통해 확인하세요.
+								</h4>
+								<ul class="btn-list">
+									<li><a href="https://pf.kakao.com/_uxcGJb"
+										class="btn-lg kakao" onclick=>카카오톡 상담 신청</a></li>
+									<!--<li><a
+									href="https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_uxcGJb%2Fchat"
+									class="btn-lg kakao"
+									onclick="window.open(this.href, '_blank', 'width=500, height=800'); return false">카카오톡
+										상담 신청</a></li>-->
+									<li><button type="button" data-idx="5"
+											data-href="js-btab-cont"
+											class="tab-link js-btab-link btn-lg green"
+											onclick="javascript:businessTabOpen(5);">상담 접수하기</button></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<!--//독립형 사업 소개영상  -->
+						<div class="tab-cont js-btab-cont js-btab-cont-5"
+							style="display: none;">
+							<form id="listForm3">
+								<input type="hidden" id="hopeLocalOneFranchaise"
+									name="hopeLocalOneFranchaise">
+								<h3 class="stitle mg">가맹점 개설 문의</h3>
+								<div class="list-head">
+									<p class="list-desc">풀무원녹즙 가맹점 개설을 위해 궁금하신 사항을 고객상담원이
+										1:1서비스로 답변드립니다.</p>
+								</div>
+								<table class="tbl-row">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 205px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><label for="ip-name1">이름</label></th>
+											<td class="input">
+												<div class="ip-wrap">
+													<input title="이름 입력" id="userNameOneFranchaise"
+														name="userNameOneFranchaise" type="text"
+														placeholder="이름을 입력해주세요." maxlength="10"> <span
+														class="message" id="nameErrorOneFranchaise"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-mobile1">휴대폰번호</label></th>
+											<td class="input">
+												<div class="ip-wrap">
+													<input title="입력" id="phoneOneFranchaise"
+														name="phoneOneFranchaise" type="text"
+														placeholder="‘-’없이 숫자만 입력해주세요" maxlength="11"> <span
+														class="message" id="phoneErrorOneFranchaise"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">이메일</th>
+											<td class="input">
+												<div class="ip-wrap">
+													<div class="ip-email-wrap">
+														<input type="text" title="이메일 아이디 입력"
+															id="emailOneFranchaise" name="emailOneFranchaise"
+															placeholder="이메일" value=""> <span class="gap">@</span>
+														<input type="text" title="이메일 도메인 직접입력"
+															id="emailHostOneFranchaise" name="emailHostOneFranchaise"
+															value=""> <input type="hidden"
+															title="이메일 도메인 직접입력" id="emailFullOneFranchaise"
+															name="emailFullOneFranchaise" value="@naver.com">
+														<select title="이메일 도메인 선택" id="emailHostListOneFranchaise"
+															name="emailHostListOneFranchaise">
+															<option value="">선택</option>
+															<option value="naver.com" selected="selected">naver.com</option>
+															<option value="daum.net">daum.net</option>
+															<option value="hanmail.net">hanmail.net</option>
+															<option value="gmail.com">gmail.com</option>
+															<option value="nate.com">nate.com</option>
+															<option value="1">직접 입력</option>
+														</select>
+													</div>
+													<span id="emailErrorOneFranchaise" class="message"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-money1">투자금</label></th>
+											<td class="input">
+												<div class="ip-txt-wrap">
+													<input title="입력" id="investOneFranchaise"
+														name="investOneFranchaise" type="text"
+														placeholder="숫자만 입력해주세요" maxlength="20"> <span
+														class="lb">만원</span> <span class="message"
+														id="investErrorOneFranchaise"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="sel-city1-1">개설희망지역</label></th>
+											<td class="input">
+												<div class="multi-sel-wrap">
+													<select title="개설희망지역 광역시/도 선택" id="sidoOneFranchaise">
+														<option value="" hidden="">광역시/도</option>
+
+														<option value="강원도">강원도</option>
+
+														<option value="경기도">경기도</option>
+
+														<option value="경상남도">경상남도</option>
+
+														<option value="경상북도">경상북도</option>
+
+														<option value="광주광역시">광주광역시</option>
+
+														<option value="대구광역시">대구광역시</option>
+
+														<option value="대전광역시">대전광역시</option>
+
+														<option value="부산광역시">부산광역시</option>
+
+														<option value="서울특별시">서울특별시</option>
+
+														<option value="세종특별자치시">세종특별자치시</option>
+
+														<option value="울산광역시">울산광역시</option>
+
+														<option value="인천광역시">인천광역시</option>
+
+														<option value="전라남도">전라남도</option>
+
+														<option value="전라북도">전라북도</option>
+
+														<option value="제주특별자치도">제주특별자치도</option>
+
+														<option value="충청남도">충청남도</option>
+
+														<option value="충청북도">충청북도</option>
+
+													</select> <select title="개설희망지역 시/군/구 선택" id="sigugunOneFranchaise">
+														<option value="" hidden="">시/군/구</option>
+													</select> <span class="message" id="hopeLocalErrorOneFranchaise"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-zipcode-1">거주지 주소</label></th>
+											<td class="input">
+												<div class="ip-btn-wrap">
+													<input type="text" id="zipcodeOneFranchaise"
+														name="zipcodeOneFranchaise" readonly="">
+													<button title="새창으로 이동합니다" class="btn-pos" type="button"
+														onclick="searchPostcode3();">우편번호 찾기</button>
+												</div>
+												<div class="ip-addr-wrap">
+													<input title="주소 입력" type="text"
+														id="roadAddressOneFranchaise" name="addr1OneFranchaise"
+														readonly=""> <input title="상세 주소 입력" type="text"
+														id="detailAddressOneFranchaise" name="addr2OneFranchaise"
+														placeholder="상세주소를 입력해주세요." maxlength="80"> <span
+														class="message" id="adressErrorOneFranchaise"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="">일일배달 사업 경험</label></th>
+											<td class="input">
+												<ul class="rc-list">
+													<li>
+														<div class="rc-item">
+															<input id="ip-rdo1-1" type="radio" checked=""
+																name="businessYnOneFranchaise" value="Y"> <label
+																for="ip-rdo1-1">있습니다</label>
+														</div>
+													</li>
+													<li>
+														<div class="rc-item">
+															<input id="ip-rdo1-2" type="radio"
+																name="businessYnOneFranchaise" value="N"> <label
+																for="ip-rdo1-2">없습니다</label>
+														</div>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="txt-1">내용</label></th>
+											<td class="input">
+												<div class="textarea-byte-check">
+													<textarea id="contentsOneFranchaise"
+														name="contentsOneFranchaise"
+														placeholder="상담하실 내용을 입력해주세요. 고객님의 개인정보 등은 표기하지 말아주세요"
+														maxlength="500"></textarea>
+													<p class="ar num-countt">
+														<span>0</span> / 500
+													</p>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="agree-wrap">
+									<div class="agree-container">
+										<div class="agree-item js-fold-wrap">
+											<div class="agree-header">
+												<span class="rc-item no-bg"> <input type="checkbox"
+													id="agree-24" name="order-agree"> <label
+													for="agree-24">개인정보 수집 및 이용 동의 (필수)</label> <!-- 20200309 텍스트 수정 -->
+												</span>
+												<button type="button" class="btn-more-view"
+													onclick="f_clickFunc()">
+													<span class="lb">내용보기</span> <i class="ico ico-arr-down-xs"></i>
+												</button>
+											</div>
+											<div class="agree-container js-fold-container"
+												style="display: none;">
+												<div class="agree-cont">
+													<!-- s: 20200313 약관 내용 수정 -->
+													<!-- s: 20200310 약관 내용 수정 -->
+													<!-- s: 20200309 약관 내용 수정 -->
+													<ol>
+														<li>1) 수집 및 이용목적 : 가맹점 개설 문의에 대한 회신</li>
+														<li>2) 수집항목 : 이름, 휴대폰번호, 투자금, 개설희망지역, 일일배달 사업 경험 여부</li>
+														<li>3) 이용기간 : 원칙적으로 수집 및 이용목적이 달성된 후에 해당 정보를 지체없이
+															파기합니다.</li>
+														<li>4) 동의거부 권리 등 : 고객은 개인정보의 제공을 거부할 권리가 있습니다. 다만,
+															개인정보 수집 및 이용동의에 동의하지 않거나 수집항목을 기재하지 않으시면 문의 접수 및 회신이 되지
+															않습니다.</li>
+													</ol>
+
+													<p>(주)풀무원녹즙은 개인정보보호 관련 법률 및 각종 기준을 준수하고 있으며, 기타 자세한 사항은
+														홈페이지에 공개한 "개인정보처리방침"을 참조하시기 바랍니다. 개인정보 수집 및 이용동의 안내 내용을
+														충분히 이해하시고 이에 동의하여 주시기 바랍니다.</p>
+													<!-- e: 20200309 약관 내용 수정 -->
+													<!-- e: 20200310 약관 내용 수정 -->
+													<!-- e: 20200313 약관 내용 수정 -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="btn-wrap">
+									<button class="btn-lg green" type="button"
+										id="fdSaveOneFranchaiseBtn">등록</button>
+								</div>
+
+
+
+							</form>
+
+
+						</div>
+						<div tabindex="-1"
+							class="ui-widget ui-widget-content ui-front ui-resizable ui-dialog"
+							role="dialog" aria-describedby="ui-id-5"
+							aria-labelledby="ui-id-6"
+							style="left: 298.5px; top: 406.5px; width: 320px; height: auto; display: none; position: absolute;">
+
+							<div class="ui-resizable-handle ui-resizable-n"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w"
+								style="z-index: 90;"></div>
+							<div
+								class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw"
+								style="z-index: 90;"></div>
+						</div>
+
+						<div tabindex="-1"
+							class="ui-widget ui-widget-content ui-front ui-resizable ui-dialog"
+							role="dialog" aria-describedby="ui-id-7"
+							aria-labelledby="ui-id-8"
+							style="left: 298.5px; top: 394px; width: 320px; height: auto; display: none; position: absolute;">
+
+							<div class="ui-resizable-handle ui-resizable-n"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w"
+								style="z-index: 90;"></div>
+							<div
+								class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw"
+								style="z-index: 90;"></div>
+						</div>
+
+					</div>
+					<!--e:1인 독립형 사업가 모집-->
+
+					<!--S:가맹점개설 안내  >-->
+					<div class="tab-cont js-tab-cont js-tab-cont-1" data-index="1"
+						style="display: block; z-index: 5;">
+						<!-- 					<h3 class="offscreen">가맹점 개설안내</h3> -->
+						<!--S:2depth tab-->
+						<div class="tab-sublist">
+							<ul class="tab-type04" style="z-index: 5;">
+								<li class="item tab-item is-active"><button type="button"
+										data-idx="3" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(3);">사업소개</button></li>
+								<li class="bar">|</li>
+								<li class="item tab-item"><button type="button"
+										data-idx="4" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(4);">성공스토리</button></li>
+								<li class="bar">|</li>
+								<li class="item tab-item"><button type="button"
+										data-idx="5" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(5);">개설프로세스</button></li>
+								<li class="bar">|</li>
+								<li class="item tab-item"><button type="button"
+										data-idx="6" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(6);">개설조건</button></li>
+								<li class="bar">|</li>
+								<li class="item tab-item"><button type="button"
+										data-idx="7" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(7);">개설문의</button></li>
+								<li class="bar">|</li>
+								<li class="item tab-item"><button type="button"
+										data-idx="8" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(8);">창업FAQ</button></li>
+							</ul>
+
+						</div>
+						<!--E:2depth tab-->
+						<div class="tab-cont js-btab-cont js-btab-cont-3">
+							<h3 class="stitle">
+								<br> <br> <br> <br> <br> 사업소개
+							</h3>
+							<!--s:영상목록-->
+							<div class="business-video">
+								<div class="video-wrap">
+									<div class="video">
+
+										<iframe width=100% height=100%;
+											src="https://www.youtube.com/embed/FnO1-uRkMqw?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;ecver=2&amp;vq=hd720&amp;rel=0"
+											title="YouTube video player" frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen=""></iframe>
+									</div>
+								</div>
+								<ul class="video-list">
+									<!-- 								data-video에 유튜브 고유 id를 넣어주세요 -->
+									<li><a data-video="FnO1-uRkMqw"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb01.jpg"
+											alt="통영가맹점"><i class="play-ico"></i></a></li>
+									<li><a data-video="sIzul-We7rQ"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb02.jpg"
+											alt="동판교오피스"><i class="play-ico"></i></a></li>
+									<li><a data-video="hg6swO1dm9g"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb03.jpg"
+											alt="왕의녹즙"><i class="play-ico"></i></a></li>
+									<li><a data-video="6kr3N5t3w-4"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb04.jpg"
+											alt="풀무원녹즙 홍보영상"><i class="play-ico"></i></a></li>
+								</ul>
+							</div>
+							<!--e:영상목록-->
+							<br> <br>
+
+							<h3 class="stitle">
+								풀무원녹즙 <span style="color: green">가맹사업의 특별함</span>
+							</h3>
+							<ul class="business-special">
+								<li><i class="ico ico-business-special01"></i>
+									<p class="title">신뢰할 수 있는 풀무원 브랜드</p>
+									<p class="desc">풀무원녹즙은 건강을 생각하는 고객들에게 많은 사랑을 받고 있는 NO.1 녹즙
+										브랜드입니다.</p></li>
+								<li><i class="ico ico-business-special02"></i>
+									<p class="title">손쉬운 창업</p>
+									<p class="desc">
+										최소한의 비용으로 창업가능!!<br>인수권리금(규모에 따라 차이) 점포임차금 외 가맹비 550만원,
+										시설비용 300만원 수준으로 창업이 가능하며, 점포(사업장)의 위치도 이면도로에 있어도 가능하기 때문에 초기
+										투자비가 낮습니다. 인수권리금은 회원수에 따라 차이가 있으며, 풀무원녹즙 전산시스템에 등록된 기준으로 투명하게
+										정산이 되며, 인수 이후 회원의 증가 시 영업권의 가치를 높일 수 있습니다.
+									</p></li>
+								<li><i class="ico ico-business-special04"></i>
+									<p class="title">믿을 수 있는 제품</p>
+									<p class="desc">전국 산지 농가와 유기농업의 장인과 계약 재배를 통해 유기농 원료를 확보하고
+										있으며, 풀무원기술연구원에서 한 달에 한 번 유기농산물과 토양을 검사, 분석, 관리하여 안전한 원료만을
+										사용합니다. 풀무원녹즙은 세계 최대 생즙공장을 보유하고 있으며, 친환경 생산시설에서 주문된 양만큼만 수확해
+										세척, 착즙, 살균, 혼합, 충진, 검사, 배송을 준비하고 하루 29만개, 연간 1억개의 녹즙 생산이
+										가능합니다.</p></li>
+								<li><i class="ico ico-business-special05"></i>
+									<p class="title">가맹본부 주도의 광고ㆍ홍보 집행</p>
+									<p class="desc">풀무원녹즙에서는 가맹점 사업자의 부담 없이 가맹본부 주도로 광고ㆍ홍보를
+										실시하고 있습니다.</p></li>
+							</ul>
+
+							<h3 class="stitle">
+								사업<span style="color: green">현황</span>
+							</h3>
+
+							<hr>
+							<ul class="business-state">
+								<li><i class="ico ico-business-state01"></i>
+									<p class="desc">풀무원녹즙은 1995년 바른먹거리 풀무원의 건강신선음료 사업으로 시작하여 매일
+										아침 신선한 채소와 과일의 영양을 그대로 고객에게 전하고 있습니다.</p></li>
+								<li><i class="ico ico-business-state02"></i>
+									<p class="desc">전국 약 400여개 가맹점(오피스 가맹점 250여개, 홈 가맹점 150여개)을
+										통해 음용을 원하는 고객에게 매일 아침 신선하게 제품을 배송하고 있습니다.</p></li>
+								<li><i class="ico ico-business-state03"></i>
+									<p class="desc">각 가맹점에서는 신선 배송을 위해 배송스텝을 모집하여 운영하고 있으며,
+										오피스(사무실)는 모닝스텝이, 홈(가정)은 홈스텝이라고 부르며 전국 1,500여명의 배송스텝들이 고객들의 배송을
+										책임지고 있습니다.</p></li>
+							</ul>
+							<br> <br> <br> <br> <br> <br> <br>
+							<br> <br> <br> <br> <br> <br> <br>
+							<br> <br> <br> <br> <br> <br>
+							<h3 class="stitle">
+								사업<span style="color: green;">형태</span>
+							</h3>
+							<div class="business-form">
+								<table class="tbl-col">
+									<caption></caption>
+									<colgroup>
+										<col width="25%">
+										<col width="">
+										<col width="">
+										<col width="">
+										<col width="">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">배송구분</th>
+											<th scope="col">스텝구분</th>
+											<th scope="col">배송시간</th>
+											<th scope="col">가맹점 수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row" class="title">오피스 가맹점(Office Delivery)</th>
+											<td>오피스 배송</td>
+											<td>모닝스텝</td>
+											<td>오전 배송 7시 ~ 1시(월~금)</td>
+											<td>약 200여개</td>
+										</tr>
+										<tr>
+											<th scope="row" class="title">홈 가맹점(Home Delivery)</th>
+											<td>가정 배송</td>
+											<td>홈스텝</td>
+											<td>새벽 배송 2시 ~ 7시(월~금)</td>
+											<td>약 150여개</td>
+										</tr>
+										<tr>
+											<th scope="row" class="title">병행가맹점</th>
+											<td>오피스&amp;가정 배송</td>
+											<td>모닝스텝&amp;홈스텝</td>
+											<td>새벽&amp;오전 병행(월~금)</td>
+											<td>약 50여개</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+						<div class="tab-cont js-btab-cont js-btab-cont-4"
+							style="display: none;">
+							<h3 class="stitle">성공스토리</h3>
+							<!--s:영상목록-->
+							<div class="business-video">
+								<div class="video-wrap">
+									<div class="video">
+										<iframe width="100%" height="100%"
+											src="https://www.youtube.com/embed/FnO1-uRkMqw?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;ecver=2&amp;vq=hd720&amp;rel=0"
+											title="YouTube video player" frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen=""></iframe>
+									</div>
+								</div>
+								<ul class="video-list">
+									<li><a data-video="FnO1-uRkMqw"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb01.jpg"
+											alt="통영가맹점"><i class="play-ico"></i></a></li>
+									<li><a data-video="sIzul-We7rQ"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb02.jpg"
+											alt="동판교오피스"><i class="play-ico"></i></a></li>
+									<li><a data-video="hg6swO1dm9g"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb03.jpg"
+											alt="왕의녹즙"><i class="play-ico"></i></a></li>
+									<li><a data-video="6kr3N5t3w-4"><img
+											src="https://greenjuice.pulmuone.com/resources/images/contents/img_business_video_thumb04.jpg"
+											alt="풀무원녹즙 홍보영상"><i class="play-ico"></i></a></li>
+								</ul>
+							</div>
+							<!--e:영상목록-->
+							<h3 class="stitle">
+								풀무원녹즙 가맹점 <em>해외연수 및 세미나</em>
+							</h3>
+							<div class="step-photo-wrap story-photo-wrap">
+								<!-- 							<ul class="photo-list"> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo01.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo02.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo03.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo04.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo05.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo06.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo07.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								<!-- 								<li> -->
+								<!-- 									<div class="thumb-box"> -->
+								<!-- 										<img src="/resources/images/contents/img_story_photo08.jpg" alt="성공스토리"> -->
+								<!-- 									</div> -->
+								<!-- 								</li> -->
+								</ul>
+							</div>
+						</div>
+						<div class="tab-cont js-btab-cont js-btab-cont-5"
+							style="display: none;">
+							<h3 class="stitle">
+								개설 <em>프로세스</em>
+							</h3>
+							<p class="stitle-desc">※ 가맹점 개설확정(선정위원회 심의) 통보 후 20일 내 계약 체결이
+								되며 가맹점주 필수 교육 이수 후 사업을 시작할 수 있습니다.</p>
+
+							<!-- s: 개설프로세스 -->
+							<div class="stp-process-wrap">
+								<ul>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process01"></i></span> <em class="step">STEP
+											01</em>
+										<p class="title">개설문의</p>
+										<p>홈페이지 상담신청</p></li>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process02"></i></span> <em class="step">STEP
+											02</em>
+										<p class="title">사업신청서 접수</p>
+										<p>
+											개설 상담 후<br>사업신청서 &amp; 자기소개서 접수
+										</p></li>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process03"></i></span> <em class="step">STEP
+											03</em>
+										<p class="title">사업후보자 검증심사</p>
+										<p>가맹점 선정위원회 심사</p></li>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process04"></i></span> <em class="step">STEP
+											04</em>
+										<p class="title">개설확정 통보</p>
+										<p>정보공개서 외 법적 문서 발송</p></li>
+								</ul>
+								<ul>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process05"></i></span> <em class="step">STEP
+											05</em>
+										<p class="title">
+											사무실확정 및<br>임대차 계약
+										</p></li>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process06"></i></span> <em class="step">STEP
+											06</em>
+										<p class="title">사업서류 구비</p></li>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process07"></i></span> <em class="step">STEP
+											07</em>
+										<p class="title">가맹점주 필수 교육 이수</p>
+										<p>
+											개설 전 본사 정규과정<br>- 온라인(e러닝)<br>- 오프라인(집합)
+										</p></li>
+									<li><span class="stp-process-step-wrap"><i
+											class="ico ico-stp-process08"></i></span> <em class="step">STEP
+											08</em>
+										<p class="title">계약 체결</p>
+										<p>
+											전자 계약 체결<br>정보공개서 수신 후 16일 이내<br>가맹비 납입(계약 후 2일 이내)
+										</p></li>
+								</ul>
+							</div>
+							<!-- e: 개설프로세스 -->
+
+							<h3 class="stitle">
+								개설<em>비용</em>
+							</h3>
+							<p class="stitle-desc">
+								※ 가맹점 개설은 기존 영업권을 인수하는 형태로 진행이 되며 최소한의 비용으로 개설을 하실 수 있도록 지원하여
+								드립니다.<br>가맹점 규모, 영업지역, 고객수에 따라 소요 비용에 차이가 있을 수 있습니다.(임대보증금은
+								포함되어 있지 않습니다.)
+							</p>
+							<!-- s: 개설비용 -->
+							<div class="stp-cost">
+								<table class="tbl-col">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 25%">
+										<col style="width: 25%">
+										<col style="width: 50%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">금액</th>
+											<th scope="col">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>가맹비</td>
+											<td>550만원</td>
+											<td>VAT 포함</td>
+										</tr>
+										<tr>
+											<td>창업교육비</td>
+											<td>없음</td>
+											<td>가맹점장, 배송스텝 교육 무상지원</td>
+										</tr>
+										<tr>
+											<td>영업권리금</td>
+											<td>최소 2000만원 ~ 1억원</td>
+											<td>규모, 영업지역, 회원수에 따라 상이함</td>
+										</tr>
+										<tr>
+											<td>간판/썬팅</td>
+											<td>100만원</td>
+											<td>1층 15평 규모의 전면썬팅 &amp; 간판 1개 기준</td>
+										</tr>
+										<tr>
+											<td>비품 및 인테리어</td>
+											<td>최소 100 ~ 300만원</td>
+											<td>냉장/냉동 설비, 오피스 용품, 사무 전산기기</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr class="total">
+											<th scope="row">합계</th>
+											<td>최소 2750만원 ~ 1억 9.5만원</td>
+											<td></td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<!-- e: 개설비용 -->
+						</div>
+
+						<div class="tab-cont js-btab-cont js-btab-cont-6"
+							style="display: none;">
+							<div class="qualification-title-wrap">
+								<div class="qualification-title">
+									<h3 class="stitle">
+										<em>개설 가능</em> 지역
+									</h3>
+									<p class="stitle-desc">개설을 희망하는 지역 및 문의사항은 상담 시 상세히 안내해
+										드립니다.</p>
+								</div>
+								<button type="button" class="btn-mid green"
+									onclick="javascript:$('.pop-qualification-area').dialog('open');">개설
+									가능 지역 보기</button>
+							</div>
+
+							<h3 class="stitle mg">
+								자격 및 <em>혜택</em>
+							</h3>
+							<ul class="qualification-info">
+								<li><i class="ico ico-qualification-info01"></i>
+									<p class="title">
+										<em>01</em> 부부가 함께 하면 좋은 사업입니다!
+									</p>
+									<p class="desc">부부가 함께 사업을 운영할 경우!! 더욱 큰 매력이 있는 사업입니다.</p></li>
+								<li><i class="ico ico-qualification-info02"></i>
+									<p class="title">
+										<em>02</em> 기본적인 컴퓨터 활용!
+									</p>
+									<p class="desc">
+										풀무원녹즙 전산시스템을 무료로 제공하여 고객 주문 · 배송 · 결제 · 정산 등을 편리하게 할 수 있도록
+										도와드립니다.<br>배송 직원들에게는 모바일 고객관리 시스템을 제공하여 간편하게 고객 관리를 하실 수
+										있습니다.<br>철저한 상권 분석으로 성공적인 사업을 지원합니다.<br>※전산기기는 별도 구비
+										필요
+									</p></li>
+								<li><i class="ico ico-qualification-info03"></i>
+									<p class="title">
+										<em>03</em> 홍보활동 가능하신 분 우대!
+									</p>
+									<p class="desc">가맹본부에서는 다양한 프로모션을 통해 가맹점의 판매활동을 지원하고 있으며,
+										가맹점은 영업지역 내 홍보 활동을 통해 매출을 더욱 올릴 수 있습니다.</p></li>
+								<li><i class="ico ico-qualification-info04"></i>
+									<p class="title">
+										<em>04</em> 온·오프라인 판촉지원
+									</p>
+									<p class="desc">포털 검색을 통한 온라인 판촉 및 풀무원 전용몰 입점으로 고객 판촉을
+										지원합니다. 오프라인 전문판촉 인력을 통한 지원도 하고 있습니다.</p></li>
+								<li><i class="ico ico-qualification-info05"></i>
+									<p class="title">
+										<em>05</em> 채용사이트 무료 지원!
+									</p>
+									<p class="desc">배송 스텝 구인이 가능하도록 브랜드 채용 사이트를 무료로 이용할 수 있게
+										지원드립니다.</p></li>
+								<li><i class="ico ico-qualification-info06"></i>
+									<p class="title">
+										<em>06</em> 사업장 임대차 조건
+									</p>
+									<p class="desc">- 물류수급의 편의성(2.5t 차량 진입로 확보)</p>
+									<p class="desc">- 근린생활시설로 우유류 판매업 및 건강기능식품 판매 허가가 가능한 곳</p>
+									<p class="desc">- 최초 실평수 기준 13평 내외</p></li>
+							</ul>
+						</div>
+
+
+						<div class="tab-cont js-btab-cont js-btab-cont-7"
+							style="display: none;">
+							<form id="listForm">
+								<input type="hidden" id="hopeLocal" name="hopeLocal">
+								<h3 class="stitle mg">가맹점 개설 문의</h3>
+								<div class="list-head">
+									<p class="list-desc">풀무원녹즙 가맹점 개설을 위해 궁금하신 사항을 고객상담원이
+										1:1서비스로 답변드립니다.</p>
+								</div>
+								<table class="tbl-row">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 205px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><label for="ip-name1">이름</label></th>
+											<td class="input">
+												<div class="ip-wrap">
+													<input title="이름 입력" id="name" name="userName" type="text"
+														placeholder="이름을 입력해주세요." maxlength="10"> <span
+														class="message" id="nameError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-mobile1">휴대폰번호</label></th>
+											<td class="input">
+												<div class="ip-wrap">
+													<input title="입력" id="phone" name="phone" type="text"
+														placeholder="‘-’없이 숫자만 입력해주세요" maxlength="11"> <span
+														class="message" id="phoneError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">이메일</th>
+											<td class="input">
+												<div class="ip-wrap">
+													<div class="ip-email-wrap">
+														<input type="text" title="이메일 아이디 입력" id="email"
+															name="email" placeholder="이메일" value=""> <input
+															type="hidden" title="이메일 아이디 입력" id="emailFull"
+															name="emailFull" placeholder="이메일" value="@naver.com">
+														<span class="gap">@</span> <input type="text"
+															title="이메일 도메인 직접입력" id="emailHost" name="emailHost"
+															value=""> <select title="이메일 도메인 선택"
+															id="emailHostList" name="emailHostList">
+															<option value="">선택</option>
+															<option value="naver.com" selected="selected">naver.com</option>
+															<option value="daum.net">daum.net</option>
+															<option value="hanmail.net">hanmail.net</option>
+															<option value="gmail.com">gmail.com</option>
+															<option value="nate.com">nate.com</option>
+															<option value="1">직접 입력</option>
+														</select>
+													</div>
+													<span id="emailError" class="message"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-money1">투자금</label></th>
+											<td class="input">
+												<div class="ip-txt-wrap">
+													<input title="입력" id="invest" name="invest" type="text"
+														placeholder="숫자만 입력해주세요" maxlength="20"> <span
+														class="lb">만원</span> <span class="message"
+														id="investError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="sel-city1-1">개설희망지역</label></th>
+											<td class="input">
+												<div class="multi-sel-wrap">
+													<select title="개설희망지역 광역시/도 선택" id="sido">
+														<option value="" hidden="">광역시/도</option>
+
+														<option value="강원도">강원도</option>
+
+														<option value="경기도">경기도</option>
+
+														<option value="경상남도">경상남도</option>
+
+														<option value="경상북도">경상북도</option>
+
+														<option value="광주광역시">광주광역시</option>
+
+														<option value="대구광역시">대구광역시</option>
+
+														<option value="대전광역시">대전광역시</option>
+
+														<option value="부산광역시">부산광역시</option>
+
+														<option value="서울특별시">서울특별시</option>
+
+														<option value="세종특별자치시">세종특별자치시</option>
+
+														<option value="울산광역시">울산광역시</option>
+
+														<option value="인천광역시">인천광역시</option>
+
+														<option value="전라남도">전라남도</option>
+
+														<option value="전라북도">전라북도</option>
+
+														<option value="제주특별자치도">제주특별자치도</option>
+
+														<option value="충청남도">충청남도</option>
+
+														<option value="충청북도">충청북도</option>
+
+													</select> <select title="개설희망지역 시/군/구 선택" id="sigugun">
+														<option value="" hidden="">시/군/구</option>
+													</select> <span class="message" id="hopeLocalError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-zipcode-1">거주지 주소</label></th>
+											<td class="input">
+												<div class="ip-btn-wrap">
+													<input type="text" id="zipcode" name="zipcode" readonly="">
+													<button title="새창으로 이동합니다" class="btn-pos" type="button"
+														onclick="searchPostcode();">우편번호 찾기</button>
+												</div>
+												<div class="ip-addr-wrap">
+													<input title="주소 입력" type="text" id="roadAddress"
+														name="addr1" readonly=""> <input title="상세 주소 입력"
+														type="text" id="detailAddress" name="addr2"
+														placeholder="상세주소를 입력해주세요." maxlength="80"> <span
+														class="message" id="adressError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="">일일배달 사업 경험</label></th>
+											<td class="input">
+												<ul class="rc-list">
+													<li>
+														<div class="rc-item">
+															<input id="ip-rdo1-1" type="radio" checked=""
+																name="businessYn" value="Y"> <label
+																for="ip-rdo1-1">있습니다</label>
+														</div>
+													</li>
+													<li>
+														<div class="rc-item">
+															<input id="ip-rdo1-2" type="radio" name="businessYn"
+																value="N"> <label for="ip-rdo1-2">없습니다</label>
+														</div>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="txt-1">내용</label></th>
+											<td class="input">
+												<div class="textarea-byte-check">
+													<textarea id="contents" name="contents"
+														placeholder="상담하실 내용을 입력해주세요. 고객님의 개인정보 등은 표기하지 말아주세요"
+														maxlength="500"></textarea>
+													<p class="ar num-countt">
+														<span>0</span> / 500
+													</p>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="agree-wrap">
+									<div class="agree-container">
+										<div class="agree-item js-fold-wrap">
+											<div class="agree-header">
+												<span class="rc-item no-bg"> <input type="checkbox"
+													id="agree-22" name="order-agree"> <label
+													for="agree-22">개인정보 수집 및 이용 동의 (필수)</label> <!-- 20200309 텍스트 수정 -->
+												</span>
+												<button type="button" class="btn-more-view"
+													onclick="f_clickFunc()">
+													<span class="lb">내용보기</span> <i class="ico ico-arr-down-xs"></i>
+												</button>
+											</div>
+											<div class="agree-container js-fold-container"
+												style="display: none;">
+												<div class="agree-cont">
+													<!-- s: 20200313 약관 내용 수정 -->
+													<!-- s: 20200310 약관 내용 수정 -->
+													<!-- s: 20200309 약관 내용 수정 -->
+													<ol>
+														<li>1) 수집 및 이용목적 : 가맹점 개설 문의에 대한 회신</li>
+														<li>2) 수집항목 : 이름, 휴대폰번호, 투자금, 개설희망지역, 일일배달 사업 경험 여부</li>
+														<li>3) 이용기간 : 원칙적으로 수집 및 이용목적이 달성된 후에 해당 정보를 지체없이
+															파기합니다.</li>
+														<li>4) 동의거부 권리 등 : 고객은 개인정보의 제공을 거부할 권리가 있습니다. 다만,
+															개인정보 수집 및 이용동의에 동의하지 않거나 수집항목을 기재하지 않으시면 문의 접수 및 회신이 되지
+															않습니다.</li>
+													</ol>
+
+													<p>(주)풀무원녹즙은 개인정보보호 관련 법률 및 각종 기준을 준수하고 있으며, 기타 자세한 사항은
+														홈페이지에 공개한 "개인정보처리방침"을 참조하시기 바랍니다. 개인정보 수집 및 이용동의 안내 내용을
+														충분히 이해하시고 이에 동의하여 주시기 바랍니다.</p>
+													<!-- e: 20200309 약관 내용 수정 -->
+													<!-- e: 20200310 약관 내용 수정 -->
+													<!-- e: 20200313 약관 내용 수정 -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="btn-wrap">
+									<button class="btn-lg green" type="button" id="fdSaveBtn">등록</button>
+								</div>
+
+
+
+							</form>
+						</div>
+
+
+						<div tabindex="-1"
+							class="ui-widget ui-widget-content ui-front ui-resizable ui-dialog"
+							role="dialog" aria-describedby="ui-id-5"
+							aria-labelledby="ui-id-6"
+							style="left: 298.5px; top: 406.5px; width: 320px; height: auto; display: none; position: absolute;">
+
+							<div class="ui-resizable-handle ui-resizable-n"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w"
+								style="z-index: 90;"></div>
+							<div
+								class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw"
+								style="z-index: 90;"></div>
+						</div>
+
+						<div tabindex="-1"
+							class="ui-widget ui-widget-content ui-front ui-resizable ui-dialog"
+							role="dialog" aria-describedby="ui-id-7"
+							aria-labelledby="ui-id-8"
+							style="left: 298.5px; top: 394px; width: 320px; height: auto; display: none; position: absolute;">
+
+							<div class="ui-resizable-handle ui-resizable-n"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w"
+								style="z-index: 90;"></div>
+							<div
+								class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw"
+								style="z-index: 90;"></div>
+						</div>
+
+						<div class="tab-cont js-btab-cont js-btab-cont-8"
+							style="display: block; height: 1500px; position: relative;">
+							<!-- 						<h3 class="offscreen">FAQ</h3> -->
+							<!--S:FAQ list-->
+							<ul class="business-faq-list" id="faqLinkCont">
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link" id="1"
+											onclick="f_clickFunc(0)">가맹점을 창업하고 싶은데 어떻게 해야 하나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+
+
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont" id="1">희망지역과 희망 사업(오피스, 홈) 여부를
+											작성하시어 상담 신청을 해주시면 담당 부서에서 창업 가능 여부를 상담해 드립니다. 희망지역에 창업이 어려운
+											경우 영업관리자가 거주지 중심으로 지역을 추천해드립니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(1)">타인에게 사업 양도와 인수가 가능한가요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">사업 양도는 가맹본부와 사전 협의 하에 가능합니다.
+											사업후보자를 직접 모집하거나 가맹본부에서 모집을 지원하고 있으며, 양수도 거래는 가맹점사업자(가맹희망자)님들
+											간의 거래로 이루어집니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(2)">희망 지역에 창업할 수 있나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">풀무원녹즙은 기존 운영지역의 배송 고객을 양도받아 사업을
+											시작하는 경우가 대부분입니다. 가맹희망자가 희망하는 지역을 최우선으로 안내해드립니다. 신규 배송 희망 지역은
+											영업 관리자가 사업성을 검토하여 상담해 드립니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(3)">권리금은 따로 없나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">기존 음용 고객에 대한 영업권리금은 있으며, 별도 보증금은
+											없습니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(4)">동일 상권에서도 추가 개설이 가능한가요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">풀무원녹즙은 가맹점간의 과열 경쟁을 지양하며 상생 협력을
+											도모하고자 가맹사업법에 따른 영업지역을 설정하여 운영합니다. 가맹본부는 정당한 사유 없이 가맹계약기간 중
+											가맹점사업자의 영업지역 안에 가맹점사업자와 동일한 업종의 직영점이나 가맹점을 설치하는 행위를 하지
+											않습니다.(계열회사 포함) 다만, 설정된 영업지역 외는 추가 개설이 가능하며, 법령에 정한 사유에 해당하는
+											경우 가맹점사업자와의 합의에 따라 추가 개설이 가능합니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(5)">사무실은 본사에서 지정해주나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">사무실 위치 선정 및 임대는 전적으로 가맹사업자가 직접
+											진행합니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(6)">최초 가맹금은 얼마인가요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">최초 가맹금는 550만원(VAT포함)입니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(7)">최초 가맹금은 사업 종료 시 돌려받을 수 있나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">최초 가맹금은 가맹점사업자가 가맹본부로부터 가맹본부의 영업표지
+											사용과 경영 및 영업활동 등에 대한 지원, 교육 등을 제공 받는 대가로, 모든 프랜차이즈 사업체에서 계약 종료
+											시 반환되지 않는 소멸성 경비로 지정하고 있습니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(8)">최초가맹금은 어떻게 납부하는 건가요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">가맹점사업자는 가맹계약 체결 후 D+2일 내 최초 가맹금을
+											당사의 계좌(국민은행)로 입금해야 합니다. 가맹점사업자의 영업개시 또는 가맹계약 체결일부터 2개월이 지난
+											예치가맹금은 가맹본부에 지급됩니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(9)">사무실 운영 비품은 어떤 게 필요한가요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">자율적으로 판단하여 가맹점 운영에 무리가 없도록 구입하여
+											비치해주시는 것을 원칙으로 하되, 관련한 제 비용은 가맹점사업자가 부담합니다. 컴퓨터, 책상, 의자, 보드판,
+											수납장, 캐비닛, 제품보관매대, 탕비실 제반, 문구류 등 가맹점 규모, 구좌, 인원 수에 따라 여건에 맞게
+											구매하시면 됩니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(10)">가전장비도 필요한가요? </a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">교육을 함께 시청할 수 있는 모니터(TV, 빔 프로젝터),
+											냉장고, 냉동고, 에어컨 등이 필요하며 장비의 수량은 가맹점 규모, 구좌, 인원수 등 제반 여건 고려 후
+											구매하시면 됩니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(11)">영업시간은 어떻게 되나요? </a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">영업시간은 평일 주 5일로 배송시간 외 고객관리, 스텝 관리
+											시간이 소요됩니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(12)">주요 고객층은 누구인가요? </a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">주요 고객층은 30~50대로 배송처는 관공서, 학교,
+											금융권(은행, 증권사), 재래시장, 상가, 가정집 등으로 다양합니다. 일평균 약 20만명이 풀무원녹즙을
+											음용하고 있습니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(13)">배송스텝은 가맹본부에서 모집해주나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">운영직원과 배송스텝은 가맹점사업자가 직접 모집 하셔야 하며,
+											가맹본부는 채용사이트를 통해 가맹점 사업자가 원만히 배송스텝을 모집할 수 있도록 온라인 홍보, 취업설명회 등을
+											진행하여 지원하고 있습니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(14)">배송스텝은 본사 특별 혜택이 있나요? </a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">
+											1. 월간 일정금액을 쌓아 목돈을 마련할 수 있는 적립금 제도를 운영하고 있습니다.<br> 2.
+											상호부조와 혜택 향상을 도모하는 상조회 제도를 가맹점사업자들 간 운영하고 있습니다.<br> 3.
+											자녀입학축하금, 국내외 연수, 로하스아카데미(연수원) 체험이 가능합니다. <br> 4. 배송스텝이
+											정착할 수 있도록 정규과정 교육 프로그램이 무료 과정으로 상시 진행되고 있으며, 모닝스텝 전용 학습 플랫폼을
+											제공합니다.
+										</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(15)">배송스텝도 창업을 시작할 수 있나요? </a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">배송스텝(모닝스텝 or 홈스텝)으로 활동 하시다가 사업에
+											자신감이 생겨 실제 가맹점사업자로 전환하는 경우가 많습니다. 자세한 사항은 상담을 통해 안내 받을 수
+											있습니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(16)">가정주부도 할 수 있나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">일반적인 프랜차이즈 사업에 비해 난이도가 낮고 가맹점사업자
+											개인의 운영보다 배송스텝(모닝스텝, 홈스텝)을 모집하여 함께 운영하는 사업으로 여성 또는 가정주부도 충분히
+											도전하실 수 있습니다. 현재, 전국 400여개 가맹점에서 약 230여개 가맹점(약 58%)은 여성 사장님이
+											운영하고 계십니다.</div>
+									</div>
+								</li>
+								<li class="faq-item js-fold-wrap">
+									<div class="js-fold-header">
+										<a href="javascript:;" class="faq-link"
+											onclick="f_clickFunc(17)">가맹 계약 후 개설까지는 기간이 얼마나 걸리나요?</a>
+										<button type="button" class="btn-more-view">
+											
+										</button>
+									</div>
+									<div class="faq-body js-fold-container">
+										<div class="faq-cont">사업 후보자 검증 단계 이후 예비 가맹점사업자로 확정이 되면
+											사업 개설시까지 약 20여 일이 소요됩니다.</div>
+									</div>
+								</li>
+							</ul>
+							<!--E:FAQ list-->
+						</div>
+
+						<!--S: inquiry button-->
+						<!-- 					<div class="footer-btn-wrap js-footer-fixed is-fixed"> -->
+						<!-- 						<div class="section"> -->
+						<!-- 							<p class="title"> -->
+						<!-- 								더 궁금하신 사항은 전화상담을 통해 확인하세요. -->
+						<!-- 							</p> -->
+						<!-- 							<button type="button" data-idx="7" data-href="js-btab-cont" class="btn-pos js-btab-link" onclick="javascript:businessTabOpen(7);"> 바로가기</button> -->
+						<!-- 							<button type="button" data-idx="7" data-href="js-btab-cont" class="btn-pos js-btab-link" onclick="javascript:businessTabOpen(7);">상담 접수하기</button> -->
+						<!-- 							&nbsp;&nbsp;&nbsp;&nbsp; -->
+						<!-- 							<button type="button" class="btn-pos" onclick="javascript:$('.pop-qualification-area').dialog('open');">개설가능 -->
+						<!-- 								지역보기</button> -->
+						<!-- 						</div> -->
+						<!-- 					</div> -->
+						<!--E: inquiry button-->
+					</div>
+					<!-- e:가맹점개설 안내 -->
+
+
+
+					<!--s:모닝스텝안내 -->
+					<div class="tab-cont js-tab-cont js-tab-cont-2"
+						style="display: none;">
+						<h3 class="offscreen">모닝스텝안내</h3>
+						<!--S:2depth tab-->
+						<div class="tab-sublist">
+							<ul class="tab-type04">
+								<li class="item tab-item is-active"><button type="button"
+										data-idx="8" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(8);">모닝스텝 소개</button></li>
+								<li class="item tab-item"><button type="button"
+										data-idx="9" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(9);">지원 및 혜택</button></li>
+								<li class="item tab-item"><button type="button"
+										data-idx="10" data-href="js-btab-cont"
+										class="tab-link js-btab-link"
+										onclick="javascript:businessTabOpen(10);">모닝스텝 지원</button></li>
+							</ul>
+						</div>
+						<!--E:2depth tab-->
+						<div class="tab-cont js-btab-cont js-btab-cont-8">
+							<h3 class="stitle">모닝스텝 안내</h3>
+							<div class="video-wrap">
+								<div class="video">
+									<iframe width="100%" height="100%"
+										src="https://www.youtube.com/embed/bkfstdS9DNg"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen=""></iframe>
+
+								</div>
+							</div>
+
+
+							<div class="morning-staff-bn">
+								<p class="offscreen">건강한 아침을 책임지는 모닝스텝</p>
+							</div>
+
+							<h3 class="stitle">
+								<em>모닝스텝</em>이란?
+							</h3>
+							<p class="stitle-desc">고객들에게 매일 아침 신선한 채소와 과일의 영양을 자연 그대로 담은
+								풀무원녹즙 제품을 전달하여 건강을 관리하는 ‘건강지킴이’입니다.</p>
+							<!-- 20200224 폰트 블랙컬러 삭제 -->
+
+							<h3 class="stitle">
+								누구나 바로, <em>지원하세요!</em>
+							</h3>
+							<div class="morning-staff-info">
+								<ol class="morning-staff-list">
+									<li><i class="ico ico-morning-staff-info03"></i>
+										<p class="title">
+											<em>01</em> 자유로운 시간 활용 가능!
+										</p>
+										<p class="desc">탄력적 시간 운영 가능! 전국 모닝스텝은 주5일 하루 5시간(배송업무
+											4시간+기타업무 1시간) 전후 오전에 활동하고 선택적으로 추가적인 활동을 통해 소득을 올리고 있습니다. 가사와
+											자녀 돌봄을 병행할 수 있어 시간적 제약이 크지 않고, 학력이나 나이제한은 없습니다.</p></li>
+									<li><i class="ico ico-morning-staff-info02"></i>
+										<p class="title">
+											<em>02</em> 안정적 소득!
+										</p>
+										<p class="desc">모닝스텝은 녹즙 가맹점에 소속되어 지역과 고정 고객을 배정받아 활동하게
+											됩니다. 활동초기 비용은 없으며,&nbsp;약&nbsp;5시간 활동으로 안정적인 수입을 올릴 수 있습니다.</p></li>
+									<li><i class="ico ico-morning-staff-info01"></i>
+										<p class="title">
+											<em>03</em> 로하스 실천의 건강한 삶
+										</p>
+										<p class="desc">주말,&nbsp;공휴일을 제외하고 매일 아침 규칙적인 활동을 통해 다양한
+											고객을 만나며 몸과 마음의 건강을 챙길 수 있습니다.</p></li>
+								</ol>
+							</div>
+
+							<h3 class="stitle">
+								모닝스텝 <em>교육 및 국내·외 연수</em>
+							</h3>
+							<div class="step-photo-wrap">
+								<!-- 						<ul class="photo-list"> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo05.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo06.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo07.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo08.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo09.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo10.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo11.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 							<li> -->
+								<!-- 								<div class="thumb-box"> -->
+								<!-- 									<img src="/resources/images/contents/img_business_photo12.jpg" alt="우수가맹점 한마음연수 및 스텝 교육"> -->
+								<!-- 								</div> -->
+								<!-- 							</li> -->
+								<!-- 						</ul> -->
+							</div>
+						</div>
+
+						<div class="tab-cont js-btab-cont js-btab-cont-9"
+							style="display: none;">
+							<h3 class="stitle">
+								풀무원녹즙만의 <em>복지와 혜택!</em>
+							</h3>
+							<ul class="morning-staff-benefit">
+								<li><i class="ico ico-staff-benefit01"></i>
+									<p class="title">지원과 복지혜택</p>
+									<p class="desc">
+										월간 일정금액이 쌓이는 적립금 제도를 운영하고 있어요! 상호부조와 혜택 향상을 도모하는 상조회 제도가 있습니다.<br>상호부조와
+										혜택 향상을 도모하는 상조회 제도를 가맹사업자들 간 운영하고 있습니다.자녀 입학 축하금,&nbsp;국내외
+										연수,&nbsp;로하스아카데미 체험도 가능합니다!<br>(※&nbsp;가맹점별 운영기준이 상이할 수
+										있습니다.)
+									</p></li>
+								<li><i class="ico ico-staff-benefit02"></i>
+									<p class="title">체계적 교육 제공!</p>
+									<p class="desc">
+										입문 교육&nbsp;&amp;&nbsp;정기 교육 프로그램을 진행합니다.<br>자세한 제품별 화법집과
+										리플렛을 드립니다.<br>모닝스텝 전용 어플리케이션을 제공합니다.
+									</p></li>
+								<li><i class="ico ico-staff-benefit03"></i>
+									<p class="title">누가 일하고 있을까?</p>
+									<div class="who-list">
+										<dl>
+											<i class="ico ico-wholist"></i>
+											<dt>"아침 운동하는 상쾌한 기분으로 활동하고 있어요"</dt>
+											<dd>20대 김O희 모닝스텝(동판교가맹점)</dd>
+										</dl>
+										<dl>
+											<i class="ico ico-wholist"></i>
+											<dt>"건강한 아르바이트로 시작했다가, 이제는 사업가(가맹점운영)을 꿈꾸고 있어요"</dt>
+											<dd>30대 이O영 모닝스텝(테헤란가맹점)</dd>
+										</dl>
+										<dl>
+											<i class="ico ico-wholist"></i>
+											<dt>"생활비와 아이들 교육비, 늘어가는 가계 부담에 다시 한번 팔을 걷어붙였죠"</dt>
+											<dd>40대 전O현 모닝스텝(동두천가맹점)</dd>
+										</dl>
+										<dl>
+											<i class="ico ico-wholist"></i>
+											<dt>
+												"경력단절 10년만에 다시 당당하게 사회활동 하고 있어요. 고객님께 건강을 전하고,<br>제 건강도
+												챙기고 일한만큼 수익까지! 앞으로 10년,20년 쭈욱 활동할 겁니다."
+											</dt>
+											<dd>50대 박O미 모닝스텝(송파가맹점)</dd>
+										</dl>
+									</div></li>
+								<li><i class="ico ico-staff-benefit04"></i>
+									<p class="title">모닝스텝 이런게 궁금해요</p>
+									<div class="qna-list">
+										<dl>
+											<dt>
+												<i class="ico ico-qna-q"></i>나이가 걱정되세요?
+											</dt>
+											<dd>
+												<i class="ico ico-qna-a"></i><em>19세 이상 누구나</em> 가능합니다!
+											</dd>
+											<!-- 20200224 폰트 블랙컬러 삭제 -->
+										</dl>
+										<dl>
+											<dt>
+												<i class="ico ico-qna-q"></i>처음이라 걱정되세요?
+											</dt>
+											<dd>
+												<i class="ico ico-qna-a"></i><em>지역과 기존 고객을 배정받고</em> 시작하게
+												됩니다!
+											</dd>
+											<!-- 20200224 폰트 블랙컬러 삭제 -->
+										</dl>
+										<dl>
+											<dt>
+												<i class="ico ico-qna-q"></i>오후 근무가 어려워요.
+											</dt>
+											<dd>
+												<i class="ico ico-qna-a"></i>탄력적인 근무시간으로 <em>일과 가정의 병행</em>이
+												가능합니다!
+											</dd>
+											<!-- 20200224 폰트 블랙컬러 삭제 -->
+										</dl>
+										<dl>
+											<dt>
+												<i class="ico ico-qna-q"></i>앞으로의 비전이 있을까요?
+											</dt>
+											<dd>
+												<i class="ico ico-qna-a"></i><em>모닝스텝부터 성장하여 사장님까지</em>
+												가능합니다!
+											</dd>
+											<!-- 20200224 폰트 블랙컬러 삭제 -->
+										</dl>
+									</div></li>
+							</ul>
+							<div class="morning-staff-app">
+								<div class="app-l">
+									<dl>
+										<dt>활동 시간 대비 고소득</dt>
+										<dd>오전 5시간 활동 → 안정적 소득</dd>
+									</dl>
+									<dl>
+										<dt>적립금 · 상조회 지원</dt>
+										<dd>
+											활동 기간 동안 적립금 지원 (3년 만기)<br>상조회 가입 지원
+										</dd>
+									</dl>
+									<dl>
+										<dt>판매 비품 무상 지급</dt>
+										<dd>
+											보냉백 · 보냉가방 · 전단 등<br>판매에 필요한 비품 무상 지원
+										</dd>
+									</dl>
+								</div>
+								<div class="app">
+									<!-- 							<img src="/resources/images/contents/img_benefit_appr.png" alt="모닝스텝"> -->
+									<button type="button" data-idx="10" data-href="js-btab-link"
+										class="btn-lg green js-btab-link"
+										onclick="javascript:businessTabOpen(10);">모닝스텝 지원
+										바로가기</button>
+								</div>
+								<div class="app-r">
+									<dl>
+										<dt>가맹 사업 오픈시 지원 혜택</dt>
+										<dd>
+											모닝스텝이 가맹 사업을 창업할 경우<br>지원 혜택 부여
+										</dd>
+									</dl>
+									<dl>
+										<dt>우수 모닝스텝 한마음 연수</dt>
+										<dd>
+											연간 판매 우수 모닝스텝 선발<br>해외 연수 지원
+										</dd>
+									</dl>
+									<dl>
+										<dt>고객 관리용 모바일 시스템 지원</dt>
+										<dd>
+											고객의 음용 정보 및 수금 관리<br>[ 개인 모바일 기기 활용 ]
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-cont js-btab-cont js-btab-cont-10"
+							style="display: none;">
+							<form id="listForm2">
+								<h3 class="stitle mg">모닝스텝 지원</h3>
+								<div class="list-head">
+									<p class="list-desc">매일아침 건강과 행복을 전하는 모닝스텝에 지원하세요!</p>
+								</div>
+								<table class="tbl-row">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 205px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><label for="ip-name1">이름</label></th>
+											<td class="input">
+												<div class="ip-wrap">
+													<input title="이름 입력" id="nameMorning" name="userName"
+														type="text" placeholder="이름을 입력해주세요." maxlength="10">
+													<span class="message" id="nameMorningError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-mobile1">휴대폰번호</label></th>
+											<td class="input">
+												<div class="ip-wrap">
+													<input title="입력" id="phoneMorning" name="cellPhone"
+														type="text" placeholder="‘-’없이 숫자만 입력해주세요" maxlength="11">
+													<span class="message" id="phoneMorningError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">이메일</th>
+											<td class="input">
+												<div class="ip-wrap">
+													<div class="ip-email-wrap">
+														<input type="text" title="이메일 아이디 입력" id="emailMorning"
+															name="emailMorning" placeholder="이메일" value=""> <input
+															type="hidden" title="이메일 아이디 입력" id="emailFullMorning"
+															name="emailFullMorning" placeholder="이메일"
+															value="@naver.com"> <span class="gap">@</span> <input
+															type="text" title="이메일 도메인 직접입력" id="emailHostMorning"
+															name="emailHostMorning" value=""> <select
+															title="이메일 도메인 선택" id="emailHostListMorning"
+															name="emailHostListMorning">
+															<option value="">선택</option>
+															<option value="naver.com" selected="selected">naver.com</option>
+															<option value="daum.net">daum.net</option>
+															<option value="hanmail.net">hanmail.net</option>
+															<option value="gmail.com">gmail.com</option>
+															<option value="nate.com">nate.com</option>
+															<option value="1">직접 입력</option>
+														</select>
+													</div>
+													<span id="emailErrorMorning" class="message"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">희망 배달업무 시간</th>
+											<td class="input">
+												<ul class="rc-list">
+													<li>
+														<div class="rc-item">
+															<input name="hopeTime" id="ip-rdo1-1" type="radio"
+																checked="" value="A"> <label for="ip-rdo1-1">오전
+																배달</label>
+														</div>
+													</li>
+													<li>
+														<div class="rc-item">
+															<input name="hopeTime" id="ip-rdo1-2" type="radio"
+																value="P"> <label for="ip-rdo1-2">새벽 배달</label>
+														</div>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="sel-year">출생년도</label></th>
+											<td class="input">
+												<div class="ip-wrap">
+													<select title="출생년도 선택" id="birthday" name="birthday">
+														<option value="" hidden="">년도</option>
+														<option value="1963">1963 년</option>
+														<option value="1964">1964 년</option>
+														<option value="1965">1965 년</option>
+														<option value="1966">1966 년</option>
+														<option value="1967">1967 년</option>
+														<option value="1968">1968 년</option>
+														<option value="1969">1969 년</option>
+														<option value="1970">1970 년</option>
+														<option value="1971">1971 년</option>
+														<option value="1972">1972 년</option>
+														<option value="1973">1973 년</option>
+														<option value="1974">1974 년</option>
+														<option value="1975">1975 년</option>
+														<option value="1976">1976 년</option>
+														<option value="1977">1977 년</option>
+														<option value="1978">1978 년</option>
+														<option value="1979">1979 년</option>
+														<option value="1980">1980 년</option>
+														<option value="1981">1981 년</option>
+														<option value="1982">1982 년</option>
+														<option value="1983">1983 년</option>
+														<option value="1984">1984 년</option>
+														<option value="1985">1985 년</option>
+														<option value="1986">1986 년</option>
+														<option value="1987">1987 년</option>
+														<option value="1988">1988 년</option>
+														<option value="1989">1989 년</option>
+														<option value="1990">1990 년</option>
+														<option value="1991">1991 년</option>
+														<option value="1992">1992 년</option>
+														<option value="1993">1993 년</option>
+														<option value="1994">1994 년</option>
+														<option value="1995">1995 년</option>
+														<option value="1996">1996 년</option>
+														<option value="1997">1997 년</option>
+														<option value="1998">1998 년</option>
+														<option value="1999">1999 년</option>
+														<option value="2000">2000 년</option>
+														<option value="2001">2001 년</option>
+														<option value="2002">2002 년</option>
+													</select> <span class="message" id="birthdayError"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="ip-zipcode-1">주소</label></th>
+											<td class="input">
+												<div class="ip-btn-wrap">
+													<input type="text" id="zipcodeMorning" name="zipCode"
+														readonly="">
+													<button title="새창으로 이동합니다" class="btn-pos" type="button"
+														onclick="searchPostcode2();">우편번호 찾기</button>
+												</div>
+												<div class="ip-addr-wrap">
+													<input title="주소 입력" type="text" id="roadAddressMorning"
+														name="addr1" readonly=""> <input title="상세 주소 입력"
+														id="detailAddressMorning" name="addr2" type="text"
+														placeholder="상세주소를 입력해주세요." maxlength="80"> <span
+														class="message" id="adressErrorMorning"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="txt-1">내용</label></th>
+											<td class="input">
+												<div class="textarea-byte-check">
+													<textarea id="memo" name="memo"
+														placeholder="상담하실 내용을 입력해주세요. 고객님의 개인정보 등은 표기하지 말아주세요"
+														maxlength="500"></textarea>
+													<p class="ar num-count">
+														<span>0</span> / 500
+													</p>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="agree-wrap">
+									<div class="agree-container">
+										<div class="agree-item js-fold-wrap">
+											<div class="agree-header">
+												<span class="rc-item no-bg"> <input type="checkbox"
+													id="agree-2202" name="order-agree"> <label
+													for="agree-2202">개인정보 수집 및 이용 동의 (필수)</label> <!-- 20200309 텍스트 수정 -->
+												</span>
+												<button type="button" class="btn-more-view"
+													onclick="f_clickFunc()">
+													<span class="lb">내용보기</span> <i class="ico ico-arr-down-xs"></i>
+												</button>
+											</div>
+											<div class="agree-container js-fold-container"
+												style="display: none;">
+												<div class="agree-cont">
+													<!-- s: 20200313 약관 내용 수정 -->
+													<!-- s: 20200310 약관 내용 수정 -->
+													<!-- s: 20200309 약관 내용 수정 -->
+													<ol>
+														<li>1) 수집 및 이용목적 : 모닝스텝 지원에 대한 회신</li>
+														<li>2) 수집항목 : 이름, 휴대폰번호, 희망 배달 업무 시간, 출생년도, 주소</li>
+														<li>3) 이용기간 : 원칙적으로 수집 및 이용목적이 달성된 후에 해당 정보를 지체없이
+															파기합니다.</li>
+														<li>4) 동의거부 권리 등 : 고객은 개인정보의 제공을 거부할 권리가 있습니다. 다만,
+															개인정보 수집 및 이용동의에 동의하지 않거나 수집항목을 기재하지 않으시면 문의 접수 및 회신이 되지
+															않습니다.</li>
+													</ol>
+
+													<p>(주)풀무원녹즙은 개인정보보호 관련 법률 및 각종 기준을 준수하고 있으며, 기타 자세한 사항은
+														홈페이지에 공개한 "개인정보처리방침"을 참조하시기 바랍니다. 개인정보 수집 및 이용동의 안내 내용을
+														충분히 이해하시고 이에 동의하여 주시기 바랍니다.</p>
+													<!-- e: 20200309 약관 내용 수정 -->
+													<!-- e: 20200310 약관 내용 수정 -->
+													<!-- e: 20200313 약관 내용 수정 -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="btn-wrap">
+									<button class="btn-lg green" type="button" id="staffApplyBtn">등록</button>
+								</div>
+							</form>
+						</div>
+
+
+						<div tabindex="-1"
+							class="ui-widget ui-widget-content ui-front ui-resizable ui-dialog"
+							role="dialog" aria-describedby="ui-id-5"
+							aria-labelledby="ui-id-6"
+							style="left: 298.5px; top: 406.5px; width: 320px; bottom: 400px; height: auto; display: none;">
+
+							<div class="ui-resizable-handle ui-resizable-n"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w"
+								style="z-index: 90;"></div>
+							<div
+								class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw"
+								style="z-index: 90;"></div>
+						</div>
+
+						<div tabindex="-1"
+							class="ui-widget ui-widget-content ui-front ui-resizable ui-dialog"
+							role="dialog" aria-describedby="ui-id-7"
+							aria-labelledby="ui-id-8"
+							style="left: 298.5px; top: 394px; width: 320px; height: auto; display: none; position: absolute;">
+
+							<div class="ui-resizable-handle ui-resizable-n"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w"
+								style="z-index: 90;"></div>
+							<div
+								class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw"
+								style="z-index: 90;"></div>
+						</div>
+
+						<!--S: morning-step-btn -->
+						<div class="footer-btn-wrap js-footer-fixed is-fixed">
+							<div class="section">
+								<p class="title">풀무원녹즙 모닝스텝 지원하기</p>
+								<button type="button" data-idx="10" data-href="js-btab-link"
+									class="btn-pos js-btab-link"
+									onclick="javascript:businessTabOpen(10);">풀무원녹즙 모닝스텝
+									지원 바로가기</button>
+							</div>
+						</div>
+						<!--E: morning-step-btn -->
+
+
+
+						<!--S: inquiry button-->
+						<!-- 						<div class="footer-btn-wrap js-footer-fixed is-fixed"> -->
+						<!-- 							<div class="section"> -->
+						<!-- 								<p class="title"> -->
+						<!-- 									더 궁금하신 사항은 전화상담을 통해 확인하세요. -->
+						<!-- 								</p> -->
+
+						<!-- 					 			<button type="button" data-idx="7" data-href="js-btab-cont" class="tab-link js-btab-link" onclick="javascript:businessTabOpen(7);"/> -->
+						<!-- 								<button type="button" class="btn-pos js-btab-link" onclick="javascript:moveToStaff();">상담 접수하기</button> -->
+						<!-- 								&nbsp;&nbsp;&nbsp;&nbsp; -->
+						<!-- 								<button type="button" class="btn-pos" onclick="javascript:moveToStaffMovie();">모닝스텝 소개 영상</button> -->
+						<!-- 							</div> -->
+						<!-- 						</div> -->
+						<!--E: inquiry button-->
+					</div>
+					<!--e: 모닝스텝안내-->
+				</div>
+				<!--e: tab-wrap inquiry-wrap -->
+			</div>
+			<!--e: cbody-cont -->
+
+			<!-- S:개설가능지역 -->
+
+			<!-- e:개설가능지역 -->
+		</div>
+		<!--e: section -->
+		<!--S: top button-->
+
+
+		<!-- <div class="btn-gotop-wrap js-btn-gotop-wrap"> -->
+		<!-- 	<a href="javascript:void(0);" class="btn-go-top js-btn-go-top sps is-fixed sps-abv"> -->
+		<!-- 		<i class="ico ico-arr-top"></i> -->
+		<!-- 		<span class="lb">TOP</span> -->
+		<!-- 	</a> -->
+		<!-- </div> -->
+		<!--E: top button-->
+	</div>
+	<!--E:cbody-->
+
+
+
+
+
+
+
+
+	<!-- Custom tag lib -->
+
+
+
+
+	<!-- 						<div class="footer-btn-wrap js-footer-fixed is-absolute"> -->
+	<!-- 						<div class="section"> -->
+	<!-- 							<p class="title"> -->
+	<!-- 								더 궁금하신 사항은 전화상담을 통해 확인하세요. -->
+	<!-- 							</p> -->
+	<!-- 							<button type="button" data-idx="7" data-href="js-btab-cont" class="btn-pos js-btab-link" onclick="javascript:businessTabOpen(7);"> 바로가기</button> -->
+	<!-- 							<button type="button" data-idx="7" data-href="js-btab-cont" class="btn-pos js-btab-link" onclick="javascript:businessTabOpen(7);">상담 접수하기</button> -->
+	<!-- 							&nbsp;&nbsp;&nbsp;&nbsp; -->
+	<!-- 							<button type="button" class="btn-pos" onclick="javascript:$('.pop-qualification-area').dialog('open');">개설가능 -->
+	<!-- 								지역보기</button> -->
+	<!-- 						</div> -->
+	<!-- 					</div> -->
+
+	<div class="footer-wrapper">
+		<!--S:fnb-wrap-->
+		<div class="fnb-wrap">
+			<div class="section">
+				<ul class="fmenu-wrap">
+					<li><a href="/info/brand">브랜드소개</a><a>&nbsp;| </a></li>
+					<li><a href="/info/privacyPolicy"><strong>개인정보
+								처리방침</strong></a><a>&nbsp;| </a></li>
+					<li><a href="/info/business">사업소개</a><a>&nbsp;| </a></li>
+					<li><a
+						onclick="javascript:$('.pop-email-security').dialog('open');"
+						href="javascript:void(0);">이메일무단수집거부</a><a>&nbsp;| </a></li>
+					<li><a href="/info/termsAndConditions">이용약관</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!--E:fnb-wrap-->
+		<!--S:footer-wrap	-->
+		<div class="footer-wrap">
+			<div class="section">
+				<span class="f-logo"><span class="offscreen"></span></span>
+				<div class="address-wrap">
+					<dl>
+						<dd>㈜풀무원녹즙 | 대표이사: 박성후 | 대표전화:02-2186-8500</dd>
+					</dl>
+					<dl>
+						<dd>호스팅 제공자 : (주)풀무원녹즙 | CS 이메일 : pmocs_05@pulmuone.com</dd>
+					</dl>
+					<dl>
+						<dd>
+							| 통신판매번호 : 2016-충북증평-00045 <a title="새창으로 이동합니다"
+								onclick="javascript:bizOpen();" href="javascript:void(0);">사업자정보확인</a>
+							| 주소 : ㈜풀무원녹즙 충청북도 증평군 도안면 원명로 35 | <span class="fc-dark-gray">고객센터
+								:</span><span class="fc-dark-gray">080-800-0393</span> (평일 09:00~18:00
+							토,일, 공휴일 휴무)
+						</dd>
+					</dl>
+				</div>
+
+
+								<div class="f-site js-f-site">
+									<a href="javascript:;" class="btn-select" onclick="javascript:familysiteOnOff($(this));">풀무원가족사이트</a>
+									<div class="f-site-list">
+										<ul>
+											<li>
+												<ul>
+													<li><span>풀무원건강생활</span></li>
+													<li><a href="https://www.pulmuone-lohas.com/pc/brand/index.do" target="_blank" rel="noopener noreferrer">풀무원로하스</a></li>
+													<li><a href="http://www.babymeal.co.kr/front/getMain.do" target="_blank" rel="noopener noreferrer">풀무원베이비밀</a></li>
+													<li><a href="http://www.eatsslim.co.kr/index_es.jsp" target="_blank" rel="noopener noreferrer">풀무원잇슬림</a></li>
+													<li><a href="http://www.pulmuoneamio.com/main.do?null" target="_blank" rel="noopener noreferrer">풀무원아미오</a></li>
+												</ul>
+											</li>
+											<li>
+												<ul>
+													<li><a href="http://www.pulmuone.kr/pulmuone/main/Index.do" target="_blank" rel="noopener noreferrer">풀무원홀딩스</a></li>
+													<li><a href="https://shop.pulmuone.co.kr/" target="_blank" rel="noopener noreferrer">#풀무원</a></li>
+													<li><a href="https://www.kimchikan.com/" target="_blank" rel="noopener noreferrer">뮤지엄김치간</a></li>
+												</ul>
+											</li>
+											<li>
+												<ul>
+													<li><a href="http://www.pulmuonewater.co.kr/htm/main/main.asp" target="_blank" rel="noopener noreferrer">풀무원샘물</a></li>
+													<li><a href="http://www.orga.co.kr/w/index.orga" target="_blank" rel="noopener noreferrer">올가홀푸드</a></li>
+													<li><a href="https://www.pulmuonefnc.com/main/main_contents.do" target="_blank" rel="noopener noreferrer">풀무원푸드앤컬처</a></li>
+													<li><a href="http://www.foodmerce.com/index.do" target="_blank" rel="noopener noreferrer">풀무원푸드머스</a></li>
+													<li><a href="http://www.exofresh.co.kr/main/" target="_blank" rel="noopener noreferrer">엑소후레쉬</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+				<p class="copyright">
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					COPYRIGHT©pulmuonegreenjuice co.,Ltd. ALL RIGHTS RESERVED
+				</p>
+			</div>
+		</div>
+		<!--E:footer-wrap	-->
+	</div>
+
+</body>
+</html>

@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	var li = document.getElementsByClassName("mouseon")
+	console.log(li)
+	
+	li.onclick = function(){
+		console.log("마우스 올라옴")
+	}
+	
+}
+
+
+</script>
+
 <style type="text/css">
 h1{
 	margin: 0;
@@ -140,11 +154,13 @@ ul{
 	position: relative;
 	padding: 10px 0 10px;
 	display: block;
+	padding: 20px 0 35px;
 }
 .cbody-cont p{
 	color: #777;
 	font-size: 16px;
 	letter-spacing: -0.8px;
+	margin-top: -10px;
 }
 
 .cbody-cont img{
@@ -156,6 +172,8 @@ ul{
 .cbody-cont li{
 	text-align: center;
 	height: 270px;
+	margin: 0px 10px 0px 0px;
+	width: 300px;
 }
 
 .number{
@@ -173,6 +191,69 @@ ul{
 	display: block;
 	margin-top: 20px;
 	color: black;
+	font-size: 13px;
+}
+
+.greenstory{
+ display: flex;
+}
+.img{
+	display : block;
+	width: 68px;
+	height: 68px;
+	background: url(https://greenjuice.pulmuone.com/resources/images/common/ico_sprite_pc.png);
+	margin: 10px auto 10px;
+}
+
+.img1{
+	background-position: -220px -680px;
+}
+
+.img2{
+	background-position: -298px -680px;
+}
+.img3{
+	background-position: -376px -680px;
+}
+.img4{
+	background-position: -454px -680px;
+}
+.img5{
+	background-position: -532px -680px;
+}
+.image{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image li{
+margin: 10px 20px 0px 0px;
+}
+
+.imgae-wrapper{
+	width: 270px;
+	height: 200px;
+	overflow: hidden;
+}
+.footer-wrapper li{
+	float: left;
+	line-height: 51px;
+	padding: 0px 10px 0px 0px;
+	
+}
+.footer-wrapper li a{
+	color: #777;
+}
+.highlight{
+	color: black !important;
+	font-weight: 1000;
+}
+
+.fnb-wrap{
+	background: #f8f8f8;
+	border: #e5e5e5;
+	height: 50px;
+	
 }
 </style>
 </head>
@@ -185,54 +266,44 @@ ul{
 				<h1><a href="/" class="h-logo"><span class="offscreen">풀무원녹즙</span></a></h1>
 				<ul class="gnb-wrap">
 					
-									<li><a href="/product/product">제품정보</a></li>
+									<li><a href="">제품정보</a></li>
 							
-									<li><a href="/customer/product">맞춤제품찾기</a></li>
+									<li><a href="">맞춤제품찾기</a></li>
 								
 								
-									<li><a href="/taste/taste">시음신청</a></li>
+									<li><a href="">시음신청</a></li>
 								
 							
-								<li><a href="javascript:void(0);" onclick="javascript:popupLogin('/mypage');">MY녹즙</a></li>
+								    <li><a href="">MY녹즙</a></li>
 							
 							
 								
-									<li><a href="/event/event">이벤트</a></li>
+									<li><a href="">이벤트</a></li>
 								
 							
-									<li><a href="/info/foundation">창업안내</a></li>
+									<li><a href="">창업안내</a></li>
 								
 							
 						 
 					
 				</ul>
-				<ul class="nav-mymenu">
-					<li><a href="javascript:void(0);" class="btn-h-search" onclick="javascript:gnbSearchOpen();"><i class="ico ico-h-search"></i><span class="offscreen">검색</span></a></li>
-					
-					<li><a href="javascript:void(0);" class="btn-h-wishlist" onclick="javascript:popupLogin('/mypage/action/interest');"><i class="ico ico-h-wishlist"></i><span class="offscreen">찜한상품</span></a></li>
-					
-					
-					
-					<li><a href="/cart/unit" class="btn-h-cart"><i class="ico ico-h-cart"><em></em></i><span class="offscreen">제품담기</span></a></li>
-					
-					
-				</ul>
+				
 			</div>
 		</div>
 		<div class="unb-wrap">
 			<div class="section f-group">
 				<div class="fl">
 					<ul>
-						<li><a href="/info/greenStory">녹즙이야기</a></li>
-						<li><a href="/search/branch">배달가능지역 검색</a></li>
+						<li><a href="">녹즙이야기</a></li>
+						<li><a href="">배달가능지역 검색</a></li>
 					</ul>
 				</div>
 				<div class="fr">
 					
 					<ul>
-						<li><a href="javascript:void(0);" id="loginPopBtn">로그인</a></li>
-						<li><a href="/member/regist/step1">회원가입</a></li>
-						<li><a href="/forum/faq?category=top10">고객지원</a></li>
+						<li><a href="">로그인</a></li>
+						<li><a href="">회원가입</a></li>
+						<li><a href="">고객지원</a></li>
 					</ul>
 					
 					
@@ -269,11 +340,11 @@ ul{
 				<h3>풀무원 녹즙의 원칙과 약속</h3>
 				<p>매일 아침 신선한 채소와 과일의 영양을 자연 그대로 전하는 풀무원녹즙 이야기</p>
 			
-				<ul>
-				<li>
-				<a href="">
+				<ul class="greenstory">
+				<li >
+				<a href="" class="mouseon">
 				<span class="number">01</span>
-				<img alt="" src="">
+				<i class="img img1"></i>
 				<span class="title">풀무원 녹즙의 원칙</span>
 				<span class="text">신선 / 안전 / 깨끗함을 지키는
 				<br>
@@ -283,9 +354,9 @@ ul{
 				</li>
 				
 				<li>
-				<a href="">
+				<a href="" class="mouseon">
 				<span class="number">02</span>
-				<img alt="" src="">
+				<i class="img img2"></i>
 				<span class="title">제품생산공정</span>
 				<span class="text">건강을 책임지는 풀무원 녹즙의
 				<br>
@@ -294,14 +365,107 @@ ul{
 				</a>
 				</li>
 				
+				<li>
+				<a href="" class="mouseon">
+				<span class="number">03</span>
+				<i class="img img3"></i>
+				<span class="title">고객만족</span>
+				<span class="text">고객이 만족할 때까지
+				<br>
+				풀무원 녹즙이 드리는 약속
+				</span>
+				</a>
+				</li>
+				
+				<li>
+				<a href="" class="mouseon">
+				<span class="number">04</span>
+				<i class="img img4"></i>
+				<span class="title">슬로건</span>
+				<span class="text">몸 속 균형을 위한 건강 밸런스,
+				<br>
+				풀무원녹즙과 프로바이오의 약속
+				</span>
+				</a>
+				</li>
+				
+				
+				<li>
+				<a href="" class="mouseon">
+				<span class="number">05</span>
+				<i class="img img5"></i>
+				<span class="title">환경방침</span>
+				<span class="text">우리의 소중한 자연을 지키기 위해
+				<br>
+				풀무원녹즙이 지키는 다짐
+				</span>
+				</a>
+				</li>
 				</ul>
 			</div>
-		
+			
+						
+				<h3>녹즙산지 탐방</h3>
+				<p>유기농 농장주의 자연 그대로의 이야기를 담았습니다.</p>
+				
+				<div class="cbody-cont2">
+				<ul class="image">
+				
+				<li>
+				<div class="image-wrapper">
+					<a href=""><img alt="" src="https://greenjuice.pulmuone.com/file/download/tour/20200302/9e2288d0-c986-470f-b434-2e9a85e58dc1.jpg"></a>
+				</div>
+				<p>돌미나리-미나리, 그 이상의 미나리</p>
+				</li>
+				
+				<li>
+				<div class="image-wrapper">
+					<a href=""><img alt="" src="https://greenjuice.pulmuone.com/file/download/tour/20200302/9e2288d0-c986-470f-b434-2e9a85e58dc1.jpg"></a>
+				</div>
+				<p>당근-제주 당근 숲에서 갓 캔-그 당근 맛</p>
+				</li>
+				<li>
+				<div class="image-wrapper">
+					<a href=""><img alt="" src="https://greenjuice.pulmuone.com/file/download/tour/20200302/9e2288d0-c986-470f-b434-2e9a85e58dc1.jpg"></a>
+				</div>
+				<p>케일-풀무원녹즙 유기농 케일녹즙</p>
+				</li>
+				<li>
+				<div class="image-wrapper">
+					<a href=""><img alt="" src="https://greenjuice.pulmuone.com/file/download/tour/20200302/9e2288d0-c986-470f-b434-2e9a85e58dc1.jpg"></a>
+				</div>
+				<p>브로콜리-브로콜리의 비밀</p>
+				</li>
+				<li>
+				<div class="image-wrapper">
+					<a href=""><img alt="" src="https://greenjuice.pulmuone.com/file/download/tour/20200302/9e2288d0-c986-470f-b434-2e9a85e58dc1.jpg"></a>
+				</div>
+				<p>명일엽-원주 농장에서 도안 공장까지</p>
+				</li>
+				</ul>
+				</div>
+			
 		</div>
 	
 	
 	</div>
+	
 </div>
+	<div class="footer-wrapper">
+		<div class="fnb-wrap" >
+			<div class="section">
+				<ul>
+				<li><a href="">브랜드소개</a>
+				<li><a href="" class="highlight">개인정보 처리방침</a>
+				<li><a href="">사업소개</a>
+				<li><a href="">이메일무단수집거부</a>
+				<li><a href="">이용약관</a>
+				
+				
+				</ul>
+			</div>
+		</div>
+	</div>
 	
 </body>
 </html>

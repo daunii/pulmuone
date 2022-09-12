@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h1{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+div{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.header-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-height: 106px;
+	padding: 30px 0 11px;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+}
+.header-wrapper .header-wrap{
+	padding-top: 17px;
+}
+
+.section{
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.header-wrapper .header-wrap h1{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.h-logo{
+	display: block;
+	width: 65px;
+	height: 47px;
+	background-image: url(https://greenjuice.pulmuone.com/resources/images/common/h_logo.png)
+}
+.offscreen{
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+}
+
+.gnb-wrap{
+	margin-left: 147px;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gnb-wrap li{
+	float: left;
+	line-height: 47px;
+}
+
+.gnb-wrap li + li{
+	margin-left: 60px;
+}
+.gnb-wrap li a{
+	font-size: 20px;
+	color: #333;
+	font-weight: 700;
+	
+}
+
+.unb-wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #f3f3f3;
+	border-bottom: 1px solid #ddd;
+	
+}
+.section{
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.fl{
+	float: left;
+}
+
+.unb-wrap ul li{
+	position: relative;
+	float: left;
+}
+.unb-wrap ul li + li{
+	padding-left: 10px;
+	margin-left: 10px;
+}
+.fr{
+	float: right;
+}
+.unb-wrap ul li a {
+	font-size: 11px;
+	line-height: 29px;
+	color: #9b9b9b;
+	
+}
+
+.container-wrapper{
+	padding: 106px 0 120px;
+}
+
+.cheader{
+	margin-top: 30px;
+}
+.section{
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.ctitle{
+	height: 32px;
+	margin-bottom: 20px;
+	font-size: 32px;
+	color: #000;
+}
+.cbody-cont a{
+	border: 1px solid #e1e1e1;
+	position: relative;
+	padding: 10px 0 10px;
+	display: block;
+}
+.cbody-cont p{
+	color: #777;
+	font-size: 16px;
+	letter-spacing: -0.8px;
+}
+
+.cbody-cont img{
+	width: 68px;
+	height: 68px;
+	margin: 20px auto 20px;
+}
+
+.cbody-cont li{
+	text-align: center;
+	height: 270px;
+}
+
+.number{
+	display:block;
+	color: #e37821;
+	font-weight: 700;
+}
+
+.title{
+	display: block;
+	color: black;
+	font-weight: 700;
+}
+.text{
+	display: block;
+	margin-top: 20px;
+	color: black;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="header-wrapper">
+		<!--S:header-wrap-->
+		<div class="header-wrap">
+			<div class="section">
+				<h1><a href="/" class="h-logo"><span class="offscreen">풀무원녹즙</span></a></h1>
+				<ul class="gnb-wrap">
+					
+									<li><a href="/product/product">제품정보</a></li>
+							
+									<li><a href="/customer/product">맞춤제품찾기</a></li>
+								
+								
+									<li><a href="/taste/taste">시음신청</a></li>
+								
+							
+								<li><a href="javascript:void(0);" onclick="javascript:popupLogin('/mypage');">MY녹즙</a></li>
+							
+							
+								
+									<li><a href="/event/event">이벤트</a></li>
+								
+							
+									<li><a href="/info/foundation">창업안내</a></li>
+								
+							
+						 
+					
+				</ul>
+				<ul class="nav-mymenu">
+					<li><a href="javascript:void(0);" class="btn-h-search" onclick="javascript:gnbSearchOpen();"><i class="ico ico-h-search"></i><span class="offscreen">검색</span></a></li>
+					
+					<li><a href="javascript:void(0);" class="btn-h-wishlist" onclick="javascript:popupLogin('/mypage/action/interest');"><i class="ico ico-h-wishlist"></i><span class="offscreen">찜한상품</span></a></li>
+					
+					
+					
+					<li><a href="/cart/unit" class="btn-h-cart"><i class="ico ico-h-cart"><em></em></i><span class="offscreen">제품담기</span></a></li>
+					
+					
+				</ul>
+			</div>
+		</div>
+		<div class="unb-wrap">
+			<div class="section f-group">
+				<div class="fl">
+					<ul>
+						<li><a href="/info/greenStory">녹즙이야기</a></li>
+						<li><a href="/search/branch">배달가능지역 검색</a></li>
+					</ul>
+				</div>
+				<div class="fr">
+					
+					<ul>
+						<li><a href="javascript:void(0);" id="loginPopBtn">로그인</a></li>
+						<li><a href="/member/regist/step1">회원가입</a></li>
+						<li><a href="/forum/faq?category=top10">고객지원</a></li>
+					</ul>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		
+	
+	</div>
+	
+	
+
+</div>
+
+<div id="container-wrapper" class="container-wrapper">
+	<div class="cheader">
+		<div class="section">
+			<div class="cnav">
+				<a href="">HOME</a>
+				<span>녹즙이야기</span>
+			</div>
+			
+			<div class="ctitle-wrap" style="margin :60px 0 50px;">
+				<h2 class="ctitle">녹즙이야기</h2>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="cbody-wrap">
+		<div class="section">
+			<div class="cbody-cont">
+				<h3>풀무원 녹즙의 원칙과 약속</h3>
+				<p>매일 아침 신선한 채소와 과일의 영양을 자연 그대로 전하는 풀무원녹즙 이야기</p>
+			
+				<ul>
+				<li>
+				<a href="">
+				<span class="number">01</span>
+				<img alt="" src="">
+				<span class="title">풀무원 녹즙의 원칙</span>
+				<span class="text">신선 / 안전 / 깨끗함을 지키는
+				<br>
+				풀무원 녹즙의 원칙
+				</span>
+				</a>
+				</li>
+				
+				<li>
+				<a href="">
+				<span class="number">02</span>
+				<img alt="" src="">
+				<span class="title">제품생산공정</span>
+				<span class="text">건강을 책임지는 풀무원 녹즙의
+				<br>
+				생산과정
+				</span>
+				</a>
+				</li>
+				
+				</ul>
+			</div>
+		
+		</div>
+	
+	
+	</div>
+</div>
+	
+</body>
+</html>

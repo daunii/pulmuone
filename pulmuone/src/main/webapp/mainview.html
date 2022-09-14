@@ -2,110 +2,739 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>풀무원 녹즙 | 메인 화면</title>
 
 <style type="text/css">
+
+
+div {
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+}
+
+ul, li {
+	list-style-type: none;
+	text-align: -webkit-match-parent;
+}
+
+a {
+	font-size: 100%;
+	text-decoration: none;
+	font-family: 'Montserrat', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.offscreen {
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
 .section {
 	width: 1140px;
 	margin: 0 auto;
-	background-color: #e9ecef;
+}
+
+
+dl, dt, dd {
+	margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
 }
 
 /* wrapper - 상단 */
-/* .wapper { } */
-.t1 li {
-	float: left;
-	margin-right: 5px;
+
+.wrapper {
+	overflow: hidden;
+	min-width: 1140px;
 }
 
-.head-wrapper .t1 ul:before {
-	padding-left: 5px;
-	content: "\"
+.header-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-height: 106px;
+	padding: 30px 0 11px;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+	z-index: 99;
 }
-/* .head-wrapper .t1 li:after {padding-right:5px; content:""} */
+
+.header-wrapper .unb-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #f3f3f3;
+	border-bottom: 1px solid #ddd;
+}
+
+.f1 {
+	float: left !important;
+}
+
+.f2 {
+	float: right !important;
+}
+
+.header-wrapper .unb-wrap ul li {
+	position: relative;
+	float: left;
+}
+
+.header-wrapper .unb-wrap ul li + li {
+	padding-left: 10px;
+	margin-left: 10px;
+}
+
+.header-wrapper .unb-wrap ul li a {
+	font-size: 11px;
+	line-height: 29px;
+	color: #9b9b9b;
+	font-family: "돋움", Dotum,'Apple SD Gothic Neo', 'Helvetica Neue', Helvetica, sans-serif;
+
+}
+
+.header-wrapper .header-wrap {
+	padding-top: 17px;
+}
+
+.header-wrapper .header-wrap h1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header-wrapper .header-wrap h1 .h-logo {
+	display: block;
+	width: 65px;
+	height: 47px;
+	background: url("https://greenjuice.pulmuone.com/resources/images/common/h_logo.png") no-repeat 0 0;
+}
+
+.header-wrapper .header-wrap .gnb-wrap {
+	margin-left: 147px;
+}
+
+.header-wrapper .header-wrap .gnb-wrap li {
+	float: left;
+	line-height: 47px;
+}
+
+.header-wrapper .header-wrap .gnb-wrap li + li {
+	margin-left: 60px;
+}
+
+.header-wrapper .header-wrap .gnb-wrap li a {
+	font-size: 20px;
+	color: #333;
+	font-weight: 700;
+	transition: all 0.1s;
+}
+
+
+/* personal-wrapper - body */
+.personal-wrapper {
+	height: 202px;
+	margin-top: -90px;
+	z-index: 10;
+}
+
+.personal-wrapper .section {
+	height: 100%;
+	padding: 30px;
+	background: #fff;
+	box-shadow: 0 3px 15px rgb(77 77 77 / 5%);
+}
+
+.personal-wrapper .pmenu-name {
+	margin-bottom: 15px;
+	font-size: 26px;
+	letter-spacing: -1.5px;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.personal-wrapper .personal-menu {
+	float: left;
+	width: 460px;
+}
+
+.personal-wrapper .personal-menu .pmenu-list {
+	padding-right: 22px;
+}
+
+.personal-wrapper .personal-menu .pmenu-list .swiper-container {
+	padding-top: 19px;
+}
+
+/* swiper */
+.swiper-container {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+
+.swiper-container ul {
+	transition-duration: 0ms;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box;
+}
+
+/* recommend */
+.recommend-wrapper {
+	margin-top: -112px;
+	padding: 212px 0 100px;
+}
+
+.racommend-wrapper .btn-wrap .btn-main-recommend {
+	position: relative;
+    display: inline-block;
+    font-size: 22px;
+    color: #555;
+    padding-right: 37px;
+}
+
+.racommend-wrapper .btn-wrap .btn-main-recommend:after {
+	content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../images/common/ico_sprite_pc.png) no-repeat -674px -80px;
+}
+
+.btn-wrap {
+	margin-top: 50px;
+}
+
+.ac {
+	text-align: center !important;
+}
+
+.bg-gray {
+	background: #f4f4f4;
+}
+
+.bg-gray .mtitle {
+	margin-bottom: 30px;
+	font-size: 32px;
+	color: #333;
+	font-weight: 400;
+	text-align: center;
+	letter-spacing: -2.5px;
+}
+
+.prd {
+	position: relative;
+	float: left;
+	width: 270px;
+	min-height: 410px;
+	max-height: 410px;
+	margin: 20px 0 0 20px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+.prd:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+.prd:nth-child(-n+4) {
+	margin-top: 0;
+}
+
+.prd .badges {
+	position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0;
+    width: 120px;
+    height: 26px;
+    z-index: 6;
+}
+
+.prd .badges .badge {
+	display: block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 100%;
+    z-index: 6;
+}
+
+.prd .badges .badge-new {
+	background: #f18c15;
+}
+
+.prd .thumb {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 100%;
+	overflow: hidden;
+}
+
+.prd .thumb img {
+	display: block;
+	width: auto;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.prd .title {
+	overflow: hidden;
+    max-height: 47px;
+    margin: 17px 30px 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.35;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+}
+
+.prd a > span {
+	display: block;
+}
+
+.prd .price-info {
+	display: block;
+	margin: 0 30px;
+	text-align: center;
+}
+
+.prd .price-info .now-price {
+	font-size: 17px;
+}
+
+.prd .price-ingo .volume {
+	font-size: 15px;
+	color: #999;
+}
+
+.prd .btn-prd-wishlist {
+	position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0;
+    width: 27px;
+    height: 23px;
+    z-index: 9;
+}
+
+
+
+
+/*  */
+button {
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	font-family:'Montserrat', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 15px;
+	box-sizing: border-box;
+}
 
 /* footer-wrapper - 하단 */
+.footer-wrapper .footer-wrap {
+	padding: 33px 0 37px;
+}
+
+.footer-wrapper .footer-wrap .f-logo {
+	display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 68px;
+    height: 50px;
+    background: url(../images/common/f_logo.png) no-repeat 0 0;
+}
+
+.footer-wrapper .fnb-wrap .fmenu-wrap li a {
+    color: #777;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.footer-wrapper .fnb-wrap .fmenu-wrap li + li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    margin-top: -5px;
+    background: #c6c6c6;
+}
+
+.footer-wrapper .fnb-wrap .fmenu-wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer-wrapper .footer-wrap .address-wrap {
+	margin-left: 102px;
+}
+
+.footer-wrapper .footer-wrap .address-wrap dl {
+	margin-bottom: 4px;
+    font-size: 12px;
+    color: #7e7e7e;
+    letter-spacing: -0.75px;
+}
+
+.footer-wrapper .footer-wrap .address-wrap dl dt {
+    float: left;
+    margin-right: 2px;
+}
+
+.footer-wrapper .footer-wrap .address-wrap dl dt.offscreen {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-wrapper .footer-wrap .address-wrap dl dd {
+    float: left;
+}
+
+.footer-wrapper .footer-wrap .address-wrap dl dd + dt, .footer-wrapper .footer-wrap .address-wrap dl dd + dt.offscreen + dd {
+    position: relative;
+    margin-left: 8px;
+    padding-left: 8px;
+}
+
+
 </style>
 </head>
 <body>
-
 	<div class="wrapper">
-		<div class="head-wrapper">
-			<div class="section top">
-				<div class="t1">
-					<ul>
-						<li><a href="https://greenjuice.pulmuone.com/info/greenStory">녹즙이야기</a>
+		<div class="header-wrapper">
+			<div class="unb-wrap">
+				<div class="section f-group">
+					<div class="f1">
+						<ul>
+							<li><a href="https://greenjuice.pulmuone.com/info/greenStory">녹즙이야기 |</a>
+							</li>
+							<li><a href="https://greenjuice.pulmuone.com/search/branch">배달가능지역
+									검색</a></li>
+						</ul>
+					</div>
+				
+					<div class="f2">
+						<ul>
+							<li><a>로그인 |</a></li>
+							<li><a
+								href="https://greenjuice.pulmuone.com/member/regist/step1">회원가입 |</a>
+							</li>
+							<li><a
+								href="https://greenjuice.pulmuone.com/forum/faq?category=top10">고객지원</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<div class="header-wrap">
+				<div class="section">
+					<h1>
+						<a href="https://greenjuice.pulmuone.com/resources/images/common/h_logo.png" class="h-logo"></a>
+						<span class="offscreen">풀무원녹즙</span>
+					</h1>
+					<ul class="gnb-wrap">
+						<li><a>제품정보</a></li>
+						<li><a>맞춤제품찾기</a></li>
+						<li><a>시음신청</a></li>
+						<li><a>MY녹즙</a></li>
+						<li><a>이벤트</a></li>
+						<li><a>창업안내</a></li>
+					</ul>
+					<ul class="nav-mymenu">
+						<li>
+						<a></a>
 						</li>
-						<li><a href="https://greenjuice.pulmuone.com/search/branch">배달가능지역
-								검색</a></li>
 					</ul>
 				</div>
 			</div>
-
+		</div>
+		<div class="personal-wrapper">
+			<div class="section">
+				<div class="personal-info f-group">
+					<p class="pmenu-name f1">고객님 안녕하세요!</p>
+				</div>
+				<div class="personal-menu">
+					<div class="pmenu-list js-swiper-wrapper">
+						<div class="js-swiper-banner swier-container swiper-container-initailized swiper-container-horizontal">
+							<ul class="swiper-wrapper js-swiper">
+								<li class="swiper-slide swiper-slide-prev">
+									<a></a>
+										<i href="https://greenjuice.pulmuone.com/resources/images/common/ico_sprite_pc.png"></i>
+								</li>
+								<li class="swiper-slide swiper-slide-active">
+									<a></a>
+										<i href="https://greenjuice.pulmuone.com/resources/images/common/ico_sprite_pc.png"></i>
+								</li>
+								<li class="swiper-slide swiper-slide-next">
+									<a></a>
+										<i href="https://greenjuice.pulmuone.com/resources/images/common/ico_sprite_pc.png"></i>
+								</li>
+								<li class="swiper-slide swiper-slide-prev">
+									<a></a>
+										<i href="https://greenjuice.pulmuone.com/resources/images/common/ico_sprite_pc.png"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+		<div>
 			<div>
-				<ul>
-					<li><a>로그인</a></li>
-					<li><a
-						href="https://greenjuice.pulmuone.com/member/regist/step1">회원가입</a>
+				<div>
+					<ul>
+						<li><a> <i> <span>음용내역</span>
+							</i>
+						</a></li>
+						<li><a> <i> <span>음용제품변경</span>
+							</i>
+						</a></li>
+						<li><a> <i> <span>찜한제품</span>
+							</i>
+						</a></li>
+						<li><a> <i> <span>고객번호등록/찾기</span>
+							</i>
+						</a></li>
+						<li><a> <i> <span>스마트청구서</span>
+							</i>
+						</a></li>
+						<li><a> <i> <span>배달건너뛰기</span>
+						</i>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<div class="recommend-wrapper bg-gray">
+	
+			<div class="section">
+				<h2 class="mtitle">오늘은 이런 제품 어떠세요? </h2>
+			
+				<div class="prd-list">
+			
+					<div class="prd">
+						<a href="https://greenjuice.pulmuone.com/product/product/326">
+							<span class="thumb">
+								<img alt="발효유 액티비아 프리미엄 슈퍼블랙" src="/resources/product01.jpg">
+							</span>
+							<span class="title">발효유 액티비아 프리미엄 슈퍼블랙</span>
+							<span class="price-info">
+								<span class="now-price">2,100원</span>
+								<span class="volume">(130ml)</span>
+							</span>
+						</a>
+						<button type="button" class="btn-prd-wishlist wishlistBtn">
+							<i class="ico ico-prd-heart"></i>
+							<span class="offscreen">찜하기</span>
+						</button>
+					</div>
+				
+					<div class="prd">
+						<a href="https://greenjuice.pulmuone.com/product/product/444">
+							<span class="badges">
+								<span class="badge badge-new">NEW</span>
+							</span>
+							<span class="thumb">
+								<img alt="핸디밀 리얼그레인 프로틴플랜" src="/pulmuone/src/main/webapp/resources/product02.jpg">
+							</span>
+							<span class="title">핸디밀 리얼그레인 프로틴플랜</span>
+							<span class="price-info">
+								<span class="now-price">3,300원</span>
+								<span class="volume">(190ml)</span>
+							</span>
+						</a>
+						<button type="button" class="btn-prd-wishlist wishlistBtn">
+							<i class="ico ico-prd-heart"></i>
+							<span class="offscreen">찜하기</span>
+						</button>
+					</div>
+				
+					<div class="prd">
+						<a href="https://greenjuice.pulmuone.com/product/product/432">
+							<span class="thumb">
+								<img alt="프레시업 양배추천해" src="/pulmuone/src/main/webapp/resources/product03.jpg"> 
+							</span>
+							<span class="title">프레시업 양배추천해</span>
+							<span class="price-info">
+								<span class="now-price">4,500원</span>
+								<span class="volume">(190ml)</span>
+							</span>
+						</a>
+						<button type="button" class="btn-prd-wishlist wishlistBtn">
+							<i class="ico ico-prd-heart"></i>
+							<span class="offscreen">찜하기</span>
+						</button>
+					</div>
+			
+					<div class="prd">
+						<a href="/resources/product04.jpg">
+							<span class="thumb">
+								<img alt="리우먼바이탈" src="/pulmuone/src/main/webapp/resources/product04.jpg"> 
+							</span>
+							<span class="title">리우먼바이탈</span>
+							<span class="price-info">
+								<span class="now-price">3,100원</span>
+								<span class="volume">(127.74g)</span>
+							</span>
+						</a>
+						<button type="button" class="btn-prd-wishlist wishlistBtn">
+							<i class="ico ico-prd-heart"></i>
+							<span class="offscreen">찜하기</span>
+						</button>
+					</div>
+				
+					<div class="btn-wrap ac">
+						<a href="" class="btn-main-recommand">
+						"상세하게 추천받기"
+						::after
+						</a>
+					</div>
+					::after
+				</div>
+			</div>
+	
+		</div>
+	</div>
+	
+	<div class="footer-wrapper">
+		<div class="fnb-wrap">
+			<div class="section">
+				<ul class="fmenu-wrap">
+					<li>
+						<a href="https://greenjuice.pulmuone.com/info/brand">브랜드소개</a>
 					</li>
-					<li><a
-						href="https://greenjuice.pulmuone.com/forum/faq?category=top10">고객지원</a>
+					<li>
+						::before
+						<a href="https://greenjuice.pulmuone.com/info/privacyPolicy">
+							<strong>개인정보 처리방침</strong>
+						</a>
+					</li>
+					<li>
+						::before
+						<a href="https://greenjuice.pulmuone.com/info/business">사업소개</a>
+					</li>
+					<li>
+						::before
+						<a href="">이메일무단수집거부</a>
+					</li>
+					<li>
+						::before
+						<a href="https://greenjuice.pulmuone.com/info/termsAndConditions">이용약관</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-
-		<div>
-			<h1>
-				<a></a>
-			</h1>
-			<ul>
-				<li><a>제품정보</a></li>
-				<li><a>맞춤제품찾기</a></li>
-				<li><a>시음신청</a></li>
-				<li><a>MY녹즙</a></li>
-				<li><a>이벤트</a></li>
-				<li><a>창업안내</a></li>
-			</ul>
-		</div>
-	</div>
-
-	<div>
-		<a></a>
-
-	</div>
-
-	<div>
-		<div>
-			고객님 안녕하세요!
-			<div>
-				<ul>
-					<li><a> <i> <span>음용내역</span>
-						</i>
-					</a></li>
-					<li><a> <i> <span>음용제품변경</span>
-						</i>
-					</a></li>
-					<li><a> <i> <span>찜한제품</span>
-						</i>
-					</a></li>
-					<li><a> <i> <span>고객번호등록/찾기</span>
-						</i>
-					</a></li>
-					<li><a> <i> <span>스마트청구서</span>
-						</i>
-					</a></li>
-					<li><a> <i> <span>배달건너뛰기</span>
-						</i>
-					</a></li>
-				</ul>
+		
+		<div class="footer-wrap">
+			<div class="section">
+				<span class="f-logo">
+					<span class="offscreen">풀무원녹즙</span>
+				</span>
+				
+				<div class="address-wrap">
+					<dl>
+						<dt class="offscreen">회사명 :</dt>
+						<dd>(주)풀무원녹즙</dd>
+						
+						<dt>
+							::after
+							"대표이사 :"
+						</dt>
+						<dd>박성후</dd>
+						
+						<dt>
+							::before
+							"대표전화 :"
+						</dt>
+						<dd>02-2186-8500</dd>
+						
+						<dt>
+							::before
+							"사업자등록번호 :"
+						</dt>
+						<dd>301-81-98406</dd>
+					</dl>
+					
+					<dl>
+						<dt>호스팅 제공가 :</dt>
+						<dd>(주)풀무원녹즙</dd>
+						<dt>
+							::before
+							"CS 이메일 :"
+						</dt>
+						<dd>pmocs_05@pulmuone.com
+					</dl>
+					
+					<dl>
+						<dt>통신판매번호 :</dt>
+						<dd>
+							"2016-충북증평 -00045"
+						<a title="새창으로 이동합니다" onclick="javascript:bizOpen();" href="javascript:void(0);">사업자정보확인</a>
+						</dd>
+						<dt class="offscreen">주소 :</dt>
+						<dd>㈜풀무원녹즙 충청북도 증평군 도안면 원명로 35</dd>
+						<dt>
+							<span class="fc-dark-gray">고객센터 :</span>
+						</dt>
+						<dd>
+							<span class="fc-dark-gray">080-800-0393</span>
+							(평일 09:00~18:00 토,일, 공휴일 휴무)
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="f-site js-f-site">
+				
+				</div>
+				<p class="copyright">COPYRIGHT©pulmuonegreenjuice co.,Ltd. ALL RIGHTS RESERVED</p>
+				::after
 			</div>
 		</div>
 	</div>
-
-
-
-
 
 
 
